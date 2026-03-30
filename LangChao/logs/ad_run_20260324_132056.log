@@ -1,0 +1,12 @@
+2026-03-24 13:20:56,061 [INFO] 开始通过浪潮 AD 接口配置 9 台服务器...
+2026-03-24 13:21:20,338 [INFO] [FAILED] 10.132.15.213: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:23,091 [INFO] [FAILED] 10.132.12.6: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:23,207 [INFO] [FAILED] 10.132.15.211: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:23,556 [INFO] [FAILED] 10.132.12.1: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:23,783 [INFO] [FAILED] 10.132.12.5: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:24,764 [INFO] [FAILED] 10.132.12.2: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:25,286 [INFO] [FAILED] 10.132.15.212: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:25,457 [INFO] [FAILED] 10.132.12.3: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:25,591 [INFO] [FAILED] 10.132.12.4: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:21:25,593 [INFO] 执行完成: success=0, failed=9, error=0, total=9
+2026-03-24 13:21:25,593 [INFO] 日志文件: logs\ad_run_20260324_132056.log

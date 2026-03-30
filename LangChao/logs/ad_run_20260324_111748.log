@@ -1,0 +1,13 @@
+2026-03-24 11:17:48,702 [INFO] 开始通过浪潮 AD 接口配置 10 台服务器...
+2026-03-24 11:17:49,100 [INFO] [ERROR] 172.18.146.11: HTTPSConnectionPool(host='172.18.146.11', port=443): Max retries exceeded with url: /api/session (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)')))
+2026-03-24 11:17:51,022 [INFO] [ERROR] 172.18.146.12: 登录失败 status=401 body={ "error": "Could not login", "code": 1009 }
+2026-03-24 11:17:57,735 [INFO] [FAILED] 172.18.155.11: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:17:58,021 [INFO] [FAILED] 172.18.95.12: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:17:58,297 [INFO] [FAILED] 172.18.95.11: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:17:58,475 [INFO] [FAILED] 172.18.165.12: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:17:58,845 [INFO] [FAILED] 172.18.125.11: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:17:59,266 [INFO] [FAILED] 172.18.165.11: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:17:59,788 [INFO] [FAILED] 172.18.155.12: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:18:01,839 [INFO] [FAILED] 172.18.125.12: AD 已配置，但 Group 映射校验失败（RemoteRoleMapping is empty）
+2026-03-24 11:18:01,840 [INFO] 执行完成: success=0, failed=8, error=2, total=10
+2026-03-24 11:18:01,841 [INFO] 日志文件: logs\ad_run_20260324_111748.log

@@ -1,0 +1,162 @@
+{
+    "h3c_api": {
+        "login_path": "/api/session",
+        "ad_settings_path": "/api/settings/active_directory_settings",
+        "ad_users_path": "/api/settings/active_directory_users",
+        "ad_settings": {
+            "domain_controller1": "172.18.88.247",
+            "domain_controller2": "",
+            "domain_controller3": "",
+            "enable": 1,
+            "RSAEncryptFlag": 1,
+            "secret_password": "Cug@2027",
+            "secret_username": "ibmccloud",
+            "user_domain_name": "hkunicom.com"
+        },
+        "ad_role_groups": [
+            {
+                "id": 1,
+                "role_group_name": "hk",
+                "role_group_domain": "hkunicom.com",
+                "role_group_privilege": "administrator",
+                "role_group_withoem_privilege": "administrator",
+                "cc": 0
+            },
+            {
+                "id": 2,
+                "role_group_name": "",
+                "role_group_domain": "",
+                "role_group_privilege": "",
+                "role_group_withoem_privilege": "",
+                "cc": 0
+            },
+            {
+                "id": 3,
+                "role_group_name": "",
+                "role_group_domain": "",
+                "role_group_privilege": "",
+                "role_group_withoem_privilege": "",
+                "cc": 0
+            },
+            {
+                "id": 4,
+                "role_group_name": "",
+                "role_group_domain": "",
+                "role_group_privilege": "",
+                "role_group_withoem_privilege": "",
+                "cc": 0
+            },
+            {
+                "id": 5,
+                "role_group_name": "",
+                "role_group_domain": "",
+                "role_group_privilege": "",
+                "role_group_withoem_privilege": "",
+                "cc": 0
+            }
+        ]
+    },
+    "h3c_redfish": {
+        "account_service_path": "/redfish/v1/AccountService",
+        "payload_candidates": [
+            {
+                "ActiveDirectory": {
+                    "ServiceEnabled": true,
+                    "ServiceAddresses": [
+                        "172.18.88.247"
+                    ],
+                    "Authentication": {
+                        "AuthenticationType": "UsernameAndPassword",
+                        "Username": "ibmccloud",
+                        "Password": "Cug@2027"
+                    },
+                    "RemoteRoleMapping": [
+                        {
+                            "RemoteGroup": "hk",
+                            "LocalRole": "Administrator",
+                            "Oem": {
+                                "Public": {
+                                    "Domain": "hkunicom.com"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "LDAP": {
+                    "ServiceEnabled": true,
+                    "ServiceAddresses": [
+                        "172.18.88.247"
+                    ],
+                    "Authentication": {
+                        "AuthenticationType": "UsernameAndPassword",
+                        "Username": "ibmccloud",
+                        "Password": "Cug@2027"
+                    },
+                    "LDAPService": {
+                        "SearchSettings": {
+                            "BaseDistinguishedNames": [
+                                "dc=hkunicom,dc=com"
+                            ],
+                            "UsernameAttribute": "sAMAccountName",
+                            "GroupsAttribute": "memberOf"
+                        }
+                    },
+                    "RemoteRoleMapping": [
+                        {
+                            "RemoteGroup": "hk",
+                            "LocalRole": "Administrator"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "dell_redfish_attributes": {
+        "ActiveDirectory.1": {
+            "Enable": 1,
+            "Schema": 2,
+            "CertValidationEnable": 0,
+            "DomainController1": "172.18.88.247",
+            "DomainController2": "",
+            "DomainController3": "",
+            "GlobalCatalog1": "172.18.88.247",
+            "GlobalCatalog2": "",
+            "GlobalCatalog3": ""
+        },
+        "ADGroup.1": {
+            "Name": "hk",
+            "Domain": "hkunicom.com",
+            "Privilege": "511"
+        },
+        "UserDomain.1": {
+            "Name": "hkunicom.com"
+        }
+    },
+    "ad_general": {
+        "domain_controller1": "172.18.88.247",
+        "domain_controller2": "",
+        "domain_controller3": "",
+        "enable": 1,
+        "id": 1,
+        "secret_password": "Cug@2027",
+        "secret_username": "ibmccloud",
+        "ssl_enable": 0,
+        "user_domain_name": "hkunicom.com"
+    },
+    "role_group": {
+        "id": 1,
+        "role_group_domain": "hkunicom.com",
+        "role_group_kvm_privilege": 0,
+        "role_group_name": "hk",
+        "role_group_privilege": "administrator",
+        "role_group_vmedia_privilege": 0,
+        "role_group_withoem_privilege": "none"
+    },
+    "verify_login": {
+        "enabled": true,
+        "username": "qiyu",
+        "password": "Cug2025"
+    }
+}

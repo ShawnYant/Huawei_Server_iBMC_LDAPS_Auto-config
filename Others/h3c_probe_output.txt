@@ -1,0 +1,1953 @@
+﻿INDEX 200
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <meta name="format-detection" content="telephone=no"> 
+
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+    <title>HDM</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="/css/index.min.css?v=2.55.00">
+
+    
+
+    </head>
+
+<body>
+
+    <div role="main" id="main">
+
+        
+
+    </div>
+
+</body>
+
+    <!--[if lte IE 9]>
+
+        <script type="text/javascript">
+
+            function getcookie(objname){//猫聨路氓聫聳忙聦聡氓庐職氓聬聧莽搂掳莽職聞cookie莽職聞氓聙录
+
+                var arrstr = document.cookie.split(";");
+
+                for(var i = 0;i < arrstr.length;i ++){
+
+                    var temp = arrstr[i].split("=");
+
+                    if(temp[0] == objname) {
+
+                        return unescape(temp[1]);
+
+                    }
+
+                }
+
+            }
+
+            var _browser = getcookie("browser");
+
+            if(_browser===undefined||_browser===null){
+
+                location.href="/err/browser_error.html";
+
+            }
+
+        </script>
+
+    <![endif]-->
+
+    <script data-main="index.min.js?v=2.55.00" src="/libs/require.js?v=2.55.00"></script>
+
+</html>
+---ASSETS---
+JS 200
+function bindEnter(e){$(e.content()).off("keydown"),$(e.content()).on("keydown",function(t){return 13==t.keyCode?($(e.content()).parents(".aui_dialog").find(".aui_state_highlight").trigger("click"),$(e.content()).parents(".aui_dialog").find(".artDialog-blue-button").trigger("click"),!1):void 0})}function isInteger(e){return parseInt(e)==e?1:0}function isIP(e){var t=/^([1-9]|[1-9]\d|1\d\d|2[0-4][0-9]|25[0-5])\.([0-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.([0-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.([0-9]|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])$/;return t.test(e)&&"0.0.0.0"!=e&&"255.255.255.255"!=e}function isSubnet(e){function t(e){for(var t="";e>0;)t+=e%2,e>>=1;for(t=t.split("").reverse().join("");t.length<8;)t="0"+t;return t}if(!isIP(e))return!1;for(var n,i=e.split("."),a="",r=0;r<i.length;r++)n=parseInt(parseFloat(i[r])),a+=t(n);return 255===parseInt(parseFloat(i[0]))&&-1==a.indexOf("1",a.indexOf("0"))}function regularUsername(e){var t="^[0-9a-zA-Z_\\u4E00-\\u9FA5]+$",n=new RegExp(t);return n.test(e)}function checkNumAndChar(e){var t=/^[0-9a-zA-Z_@\.]+$/,n=new RegExp(t);return n.test(e)}function isDeviceName(e){var t=/^\S/,n=/\S$/,i=/^[0-9a-zA-Z_\u4e00-\u9fa5\s]+$/;return t.test(e)&&n.test(e)&&i.test(e)}function isLongDes(e){var t=/^\S/,n=/\S$/,i=/^[0-9a-zA-Z_\u4e00-\u9fa5\s\!\(\)\"\-\_\<\>\;\:\,\.\?\茂录聛\茂录聢\茂录聣\芒聙聹\芒聙聺\芒聙聵\芒聙聶\-\芒聙聰芒聙聰\茂录聸\茂录職\茂录聦\茫聙聜\茫聙聛\茂录聼\芒聙娄芒聙娄\茫聙聤\茫聙聥]+$/;return t.test(e)&&n.test(e)&&i.test(e)}function firstLetterUpper(e){var t=e.toLowerCase();return t.replace(/\b(\w)|\s(\w)/g,function(e){return e.toUpperCase()})}function isMAC(e){var t=$.trim(e),n=/^[0-9a-fA-F][0|2|4|6|8|a|c|e|A|C|E]:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}$/;return n.test(t)}function compareIP(e,t){var n,i,a=$.trim(e),r=$.trim(t);n=a.split("."),i=r.split(".");for(var l=0;4>l;l++){if(parseInt(n[l])>parseInt(i[l]))return 1;if(parseInt(n[l])<parseInt(i[l]))return-1}return 0}function compareIPv6(e,t){function n(e){var t=e.split(":");if(t.length<8)for(var n=0,r=0;r<t.length;r++)if(""==t[r]){if(1==n){t[r]=i(4);continue}t[r]=i(4*(9-t.length)),n++}else t[r]+=":";else if(8==t.length)for(var r=0;8>r;r++)t[r]+=":";return a(t)}function i(e){for(var t="",n=1;e+1>n;n++)t+="0",n%4==0&&(t+=":");return t}function a(e){for(var t="",n=0;n<e.length;n++)t+=e[n];return":"==t.charAt(t.length-1)&&(t=t.substr(0,t.length-1)),t}for(var r=n(e),l=n(t),s=r.split(":"),o=l.split(":"),c=0;8>c;c++){if(parseInt(s[c],16)>parseInt(o[c],16))return 1;if(parseInt(s[c],16)<parseInt(o[c],16))return-1}return 0}function isPort(e){var t=/^([1-9]|[1-9]\d|[1-9]\d{2}|[1-9]\d{3}|[1-5]\d{4}|6[0-4]\d{3}|65[0-4]\d{2}|655[0-2]\d|6553[0-5])$/;return t.test(e)}function IPMaskMatch(e,t){for(var n=IP.binary(e),i=IP.binary(t),a="",r=0;32>r;r++)a+=String(n.charAt(r)&i.charAt(r));for(var l,s=i.match(/0+/)[0].length,o=n.slice(-s),r=0;r<o.length;r++)if(0==r&&(l=o.charAt(0)),o.charAt(r)!=l)return!0;return!1}function checkBroadcast(e,t){for(var n="",i="",a="",r="",l=0;32>l;l++)n+=String(IP.binary(e).charAt(l)&IP.binary(t).charAt(l)),i+=String(~IP.binary(t).charAt(l)+2);for(var l=0;32>l;l++)a+=String(i.charAt(l)|n.charAt(l)),(l+1)%8===0&&(r+=parseInt(a,2)+".",a="");return r=r.substring(0,r.length-1),e===r}function isHostName(e){var t=/^([a-zA-Z0-9\-])+$/,n=new String(e);return n.length>63||n.length<1?(delete n,!1):"-"==n.charAt(0)||"-"==n.charAt(n.length-1)?(delete n,!1):n.match(t)?(delete n,!0):(delete n,!1)}function getSuffix(e){var t=/\.[^\.]+$/.exec(e);return t[0].substring(1)}function getLanguage(){var e;return e=navigator.language,e||(e=navigator.browserLanguage),"zh-cn"==e.toLowerCase()?"cn":"en"}function jsonToStr(e){var t="";return $.each(e,function(e,n){t+=',"'+e+'":'+n}),""!=t&&(t=t.substring(1)),"{"+t+"}"}function raidoToChecked(e,t){return e===t?'checked="checked"':""}function checkToDisabled(e,t){var n=t||0;return e===n?'disabled="disabled"':""}function specialCharacter(e,t){var n;return n=t?new RegExp("(["+t+"])"):/([~#$.,@!%^&*:;\/\\ ()])/,e.match(n)?(delete n,!1)
+---KEYWORD-HITS---
+ldap 201204
+kie("product_board_id"),o=parseInt(jQuery.cookie("productID_num")),c=(16711680&o)>>16===5,u=2181366536===o||2181366793===o||2181367047===o,d=[2164589318,2164589319,2147812353,2164589828,2164593926,2164593927],p=0;p<t.menu.length;p++){for(var h=n[t.menu[p]].subMenu,f="",g=!0,m=0;m<h.length;m++)(!l||"ldap"!==h[m].url&&"snmp"!==h[m].url&&"ad"!==h[m].url&&"shared_port"!==h[m].url&&"port_mode"!==h[m].url)&&("log"===h[m].url&&t.isUser||(l&&"backup_restore"===h[m].url&&(h[m].name[t.lang]=t.langpack.backupRestore.alipath),(c&&!u&&-1===d.indexOf(o)||"panel_control"!==h[m].url)&&(c&&!u&&2147812353!==o||"udisk_control"!==h[m].url)&&("us2024"!==s||"system_setting"!==h[m].url)&&("amd"===s?"resource_summary"===h[m].url?h[m].helpId="466":"pef"===h[m].url?h[m].helpId="469":"power_management"===h[m].url&&(h[m].helpId="475"):"uis"===s?"heat_management"===h[m].url?h[m].helpId="465":"network"===h[m].url?h[m].helpId="468":"power_management"===h[m].url&&(h[m].helpId="474"):"8p"===s?"system_setting"===h[m].u
+---
+active 26624
+turn f}.bind(this),this.beginSlide=function(){var e=$(".slide-box .item-boxs").length,t=parseInt($(".slide-box .item-boxs").first().width())+parseInt($(".slide-box .item-boxs").css("margin-right")),n=0;this.interVal=setInterval(function(){n++,n>=e&&(n=0),$("#tooltipHolder .pages span").removeClass("active").eq(n).addClass("active"),$(".slide-box .item-boxs").first().animate({marginLeft:-t+"px"},500,function(){$(this).css({marginLeft:0}).appendTo(".slide-box")})},3e3)},this.draw_label=function(e,t,n,a,r,l,s,o,c){var u=this,d=void 0!==i.show?o*this.scaleSize:o,p=e.circle((l+t*o+c)*this.picSize,(s+n*d+a)*this.picSize,7).attr({fill:"green",opacity:.7,cursor:"pointer",zIndex:100}),h=new Object;h.x=l+t*o+c,h.y=s+n*o+a,"front"==this.graphOptions.orientation?this.centerPoint[15-n][t]=h:this.centerPoint[n][15-t]=h,p.hover(function(e){u.showTooltip(e,u.mesh[n][t]),u.fill="rgb(0,0,0)"},function(){u.clearTooltip()}),p.mouseover(function(e){$("#tooltipHolder .pages span").first().addClass("active")
+---
+domain 8496
+rn!(!e||!t||e.toLowerCase()!==t.toLowerCase())}function checkNTPServer(e){return!!/^(([a-zA-Z0-9]{1})|([a-zA-Z]{1}[a-zA-Z]{1})|([a-zA-Z]{1}[0-9]{1})|([0-9]{1}[a-zA-Z]{1})|([a-zA-Z0-9][a-zA-Z0-9-_]{1,61}[a-zA-Z0-9]))(.*\.)?.*\.([a-zA-Z]{2,6}|[a-zA-Z0-9-]{2,30}\.[a-zA-Z]{2,3})$/.test(e)}function checkDomain(e){var t=/^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/;return t.test(e)&&e.length<=64}function checkDomain2(e){var t=/^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/;return t.test(e)&&e.length<=128}function checkDomain3(e){var t=/^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/;return t.test(e)&&e.length<=255}function checkIPAndDomain(e,t,n){var i=/^(?=^.{3,255}$)[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/,a=/^[0-9]*$/,r=e.split(".").join("");return a.test(r)?IP.checkAll(e):i.test(e)&&e.length<=255||checkIPV6(e,t,n)}function Validator(e,t){var n=this;this.rule=e,t
+---
+role 216518
+Data._===c+".display"||(s.innerHTML=S(t,i,c,"display")),o.sClass&&(s.className+=" "+o.sClass),o.bVisible&&!a?l.appendChild(s):!o.bVisible&&a&&s.parentNode.removeChild(s),o.fnCreatedCell&&o.fnCreatedCell.call(t.oInstance,s,S(t,i,c),p,i,c);Ne(t,"aoRowCreatedCallback",null,[l,p,i])}d.nTr.setAttribute("role","row")}function E(t,n){var i=n.nTr,a=n._aData;if(i){var r=t.rowIdFn(a);r&&(i.id=r),a.DT_RowClass&&(r=a.DT_RowClass.split(" "),n.__rowc=n.__rowc?ct(n.__rowc.concat(r)):r,e(i).removeClass(n.__rowc.join(" ")).addClass(a.DT_RowClass)),a.DT_RowAttr&&e(i).attr(a.DT_RowAttr),a.DT_RowData&&e(i).data(a.DT_RowData)}}function j(t){var n,i,a,r,l,s=t.nTHead,o=t.nTFoot,c=0===e("th, td",s).length,u=t.oClasses,d=t.aoColumns;for(c&&(r=e("<tr/>").appendTo(s)),n=0,i=d.length;i>n;n++)l=d[n],a=e(l.nTh).addClass(l.sClass),c&&a.appendTo(r),t.oFeatures.bSort&&(a.addClass(l.sSortingClass),!1!==l.bSortable&&(a.attr("tabindex",t.iTabIndex).attr("aria-controls",t.sTableId),ke(t,l.nTh,n))),l.sTitle!=a[0].innerHTML
+---
+ad 2926
+5[0-2]\d|6553[0-5])$/;return t.test(e)}function IPMaskMatch(e,t){for(var n=IP.binary(e),i=IP.binary(t),a="",r=0;32>r;r++)a+=String(n.charAt(r)&i.charAt(r));for(var l,s=i.match(/0+/)[0].length,o=n.slice(-s),r=0;r<o.length;r++)if(0==r&&(l=o.charAt(0)),o.charAt(r)!=l)return!0;return!1}function checkBroadcast(e,t){for(var n="",i="",a="",r="",l=0;32>l;l++)n+=String(IP.binary(e).charAt(l)&IP.binary(t).charAt(l)),i+=String(~IP.binary(t).charAt(l)+2);for(var l=0;32>l;l++)a+=String(i.charAt(l)|n.charAt(l)),(l+1)%8===0&&(r+=parseInt(a,2)+".",a="");return r=r.substring(0,r.length-1),e===r}function isHostName(e){var t=/^([a-zA-Z0-9\-])+$/,n=new String(e);return n.length>63||n.length<1?(delete n,!1):"-"==n.charAt(0)||"-"==n.charAt(n.length-1)?(delete n,!1):n.match(t)?(delete n,!0):(delete n,!1)}function getSuffix(e){var t=/\.[^\.]+$/.exec(e);return t[0].substring(1)}function getLanguage(){var e;return e=navigator.language,e||(e=navigator.browserLanguage),"zh-cn"==e.toLowerCase()?"cn":"en"}function 
+---
+public 20297
+8,n[--t]=a>>12|224)}n[--t]=0;for(var r=new SecureRandom,l=new Array;t>2;){for(l[0]=0;0==l[0];)r.nextBytes(l);n[--t]=l[0]}return n[--t]=2,n[--t]=0,new BigInteger(n)}function RSAKey(){this.n=null,this.e=0,this.d=null,this.p=null,this.q=null,this.dmp1=null,this.dmq1=null,this.coeff=null}function RSASetPublic(e,t){null!=e&&null!=t&&e.length>0&&t.length>0?(this.n=parseBigInt(e,16),this.e=parseInt(t,16)):"en"===getCookie("lang")?alert("Network error. Please refresh the page and try again."):alert("莽陆聭莽禄聹氓录聜氓赂赂,猫炉路氓聢路忙聳掳氓聬聨茅聡聧猫炉聲")}function getCookie(e){for(var t=document.cookie,n=t.split("; "),i=0;i<n.length;i++){var a=n[i].split("=");if(a[0]==e)return a[1]}return""}function RSADoPublic(e){return e.modPowInt(this.e,this.n)}function RSAEncrypt(e){var t=pkcs1pad2(e,this.n.bitLength()+7>>3);if(null==t)return null;var n=this.doPublic(t);if(null==n)return null;for(var i=n.toString(16);i.length<256;)i="0"+i;return i}function hex2b64(e){var t,n,i="";for(t=0;t+3<=e.length;t+=3)n=parseInt(e.substring
+---
+login 302204
+</span>\r\n<%}else{%>\r\n    <span class="right ml25"><em class="setLang icons-lang-en"></em></span>\r\n<%}%>\r\n<span class="right ml25 hide" id="prePower" ></span>\r\n<span class="right ml25 hide" id="preUID"></span>\r\n<span id="powerOn"  class="hide"></span>\r\n<div class="h3c-section hide" id="loginTip" ></div>'}),define("text!js/templates/user_list.html",[],function(){return"<div class=\"online-user-list\">\r\n    <div class=\"h3c-table\">\r\n        <table id=\"onlineUserList\" class=\"table table-bordered\">\r\n            <thead>\r\n            <tr>\r\n                <th><%=lang.dashboard.sessionID%></th>\r\n                <th><%=lang.dashboard.sessionType%></th>\r\n                <th><%=lang.dashboard.sessionUserID%></th>\r\n                <th><%=lang.dashboard.sessionUserName%></th>\r\n                <th><%=lang.dashboard.sessionClientIP%></th>\r\n                <th><%=lang.dashboard.sessionPrivilege%></th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\
+---
+session 168166
+otype=i.prototype,n.prototype=new a,e&&s.extend(n.prototype,e),n.__super__=i.prototype,n};h.extend=m.extend=C.extend=w.extend=M.extend=N;var R=function(){throw new Error('A "url" property or function must be specified')},F=function(e,t){var n=t.error;t.error=function(i){return 401===i.status&&"/api/session"!==e.urlRoot?void top.window.error401():403===i.status&&"/api/session"!==e.urlRoot&&"/api/actions/power"!==e.urlRoot?void top.window.noAuth():(n&&void 0===i.abortFlag&&n(e,i,t),void e.trigger("error",e,i,t))}}}.call(this),define("backbone",["jquery","underscore"],function(e){return function(){var t;return t||e.Backbone}}(this)),define("text",["module"],function(e){"use strict";var t,n,i,a,r,l=["Msxml2.XMLHTTP","Microsoft.XMLHTTP","Msxml2.XMLHTTP.4.0"],s=/^\s*<\?xml(\s)+version=[\'\"](\d)*.(\d)*[\'\"](\s)*\?>/im,o=/<body[^>]*>\s*([\s\S]+)\s*<\/body>/im,c="undefined"!=typeof location&&location.href,u=c&&location.protocol&&location.protocol.replace(/\:/,""),d=c&&location.hostname,p=c&&(
+---
+token 65606
+(i);return e}),gt:c(function(e,t,n){for(var i=0>n?n+t:n;++i<t;)e.push(i);return e})}},S.pseudos.nth=S.pseudos.eq;for(y in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})S.pseudos[y]=s(y);for(y in{submit:!0,reset:!0})S.pseudos[y]=o(y);return d.prototype=S.filters=S.pseudos,S.setFilters=new d,C=t.tokenize=function(e,n){var i,a,r,l,s,o,c,u=H[e+" "];if(u)return n?0:u.slice(0);for(s=e,o=[],c=S.preFilter;s;){(!i||(a=ce.exec(s)))&&(a&&(s=s.slice(a[0].length)||s),o.push(r=[])),i=!1,(a=ue.exec(s))&&(i=a.shift(),r.push({value:i,type:a[0].replace(oe," ")}),s=s.slice(i.length));for(l in S.filter)!(a=fe[l].exec(s))||c[l]&&!(a=c[l](a))||(i=a.shift(),r.push({value:i,type:l,matches:a}),s=s.slice(i.length));if(!i)break}return n?s.length:s?t.error(e):H(e,o).slice(0)},T=t.compile=function(e,t){var n,i=[],a=[],r=$[e+" "];if(!r){for(t||(t=C(e)),n=t.length;n--;)r=b(t[n]),r[U]?i.push(r):a.push(r);r=$(e,_(a,i)),r.selector=e}return r},D=t.select=function(e,t,n,i){var a,r,l,s,o,c="function"==typeof e&&e,d=!
+---
+---STRING-HITS---
+;t(this).addClass(
++e).addClass(e+
++this.negate().toString(e);var t;if(16==e)t=4;else if(8==e)t=3;else if(2==e)t=1;else if(32==e)t=5;else{if(4!=e)return this.toRadix(e);t=2}var n,i=(1<<t)-1,a=!1,r=
++e.toString(16):e.toString(16)}function pkcs1pad2(e,t){if(t<e.length+11)return alert(
+).eq(n).addClass(
+).first().addClass(
++this.lang.ocean.reading+
++this.template(t.label,t.status,t.readingTxt,t.higher_non_critical_threshold,t.higher_critical_threshold,t.higher_non_recoverable_threshold,t.threshold_mask,t.template)+
+load
+onreadystatechange
+onload
+===fe.readyState)&&(l(),ae.ready())}function o(e,t,n){if(void 0===n&&1===e.nodeType){var i=
+padding
+===o[0];)o.shift(),void 0===a&&(a=e.mimeType||t.getResponseHeader(
+),isReady:!0,error:function(e){throw new Error(e)},noop:function(){},isFunction:function(e){return
+checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped
+onunload
+ready
+===fe.readyState)setTimeout(ae.ready);else if(fe.addEventListener)fe.addEventListener(
+,s,!1),e.addEventListener(
+)}catch(e){return setTimeout(a,50)}l(),ae.ready()}}()}return we.promise(t)};var Se,xe=
+display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1
+).add(function(){ae._removeData(e,t+
+),n&&n.empty&&(i++,n.empty.add(s));return s(),a.promise(t)}});var Te=/[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,De=[
+,ne.leadingWhitespace=3===t.firstChild.nodeType,ne.tbody=!t.getElementsByTagName(
+radio
+)},o),(p=l[h])||(p=l[h]=[],p.delegateCount=0,c.setup&&c.setup.call(e,i,f,u)!==!1||(e.addEventListener?e.addEventListener(h,u,!1):e.attachEvent&&e.attachEvent(
+)&&void ae.event.add(this,
+)&&(ae.event.add(n,
+===e.originalEvent.propertyName&&(this._just_changed=!0)}),ae.event.add(this,
+,this,e,!0)})),!1):void ae.event.add(this,
+)&&(ae.event.add(t,
+abbr|article|aside|audio|bdi|canvas|data|datalist|details|figcaption|figure|footer|header|hgroup|mark|meter|nav|output|progress|section|summary|time|video
+],thead:[1,
+)+u[2],a=u[0];a--;)s=s.lastChild;if(!ne.leadingWhitespace&&Ue.test(r)&&h.push(t.createTextNode(Ue.exec(r)[0])),!ne.tbody)for(r=
+!=typeof e||He.test(e)||!ne.htmlSerialize&&Be.test(e)||!ne.leadingWhitespace&&Ue.test(e)||Ye[(We.exec(e)||[
+-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;display:block;margin:0;border:0;padding:1px;width:1px;zoom:1
+-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:block;margin-top:1%;top:1%;border:1px;padding:1px;width:4px;position:absolute
+-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;display:block;margin:0;border:0;padding:0
+margin:0;border:0;padding:0;display:none
+,padding:
+),i.old=i.complete,i.complete=function(){ae.isFunction(i.old)&&i.old.call(this),i.queue&&ae.dequeue(this,i.queue)},i},ae.fn.extend({fadeTo:function(e,t,n,i){return this.filter(Ie).css(
+),fadeIn:{opacity:
+},fadeOut:{opacity:
+},fadeToggle:{opacity:
+),e.removeAttribute(Ct?n:i)},attrHooks:{type:{set:function(e,t){if(!ne.radioValue&&
+readOnly
+cellPadding
+);var At=/[\t\r\n\f]/g;ae.fn.extend({addClass:function(e){var t,n,i,a,r,l,s=0,o=this.length,c=
+==typeof e&&e;if(ae.isFunction(e))return this.each(function(t){ae(this).addClass(e.call(this,t,this.className))});if(c)for(t=(e||
+===n?t?this.addClass(e):this.removeClass(e):this.each(ae.isFunction(e)?function(n){ae(this).toggleClass(e.call(this,n,this.className,t),t)}:function(){if(
+===n)for(var t,i=0,a=ae(this),r=e.match(_e)||[];t=r[i++];)a.hasClass(t)?a.removeClass(t):a.addClass(t);else(n===xe||
+blur focus focusin focusout load resize scroll unload click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup error contextmenu
+,n.loadXML(t))}catch(a){n=void 0}return n&&n.documentElement&&!n.getElementsByTagName(
+,w.readyState=e>0?4:0,a=e>=200&&300>e||304===e,n&&(b=V(d,w,n)),b=z(d,b,w,a),a?(d.ifModified&&(y=w.getResponseHeader(
+),y&&(ae.lastModified[r]=y),y=w.getResponseHeader(
+HEAD
+],null==d.crossDomain&&(i=Wt.exec(d.url.toLowerCase()),d.crossDomain=!(!i||i[1]===Et[1]&&i[2]===Et[2]&&(i[3]||(
+!=typeof d.data&&(d.data=ae.param(d.data,d.traditional)),O(Vt,d,t,w),2===_)return w;o=d.global,o&&0===ae.active++&&ae.event.trigger(
++Mt++)),d.ifModified&&(ae.lastModified[r]&&w.setRequestHeader(
+,ae.lastModified[r]),ae.etag[r]&&w.setRequestHeader(
+,ae.etag[r])),(d.data&&d.hasContent&&d.contentType!==!1||t.contentType)&&w.setRequestHeader(
+,d.contentType),w.setRequestHeader(
+]);for(a in d.headers)w.setRequestHeader(a,d.headers[a]);if(d.beforeSend&&(d.beforeSend.call(p,w,d)===!1||2===_))return w.abort();y=
+;for(a in{success:1,error:1,complete:1})w[a](d[a]);if(c=O(zt,d,t,w)){w.readyState=1,o&&h.trigger(
+);for(a in n)void 0!==n[a]&&r.setRequestHeader(a,n[a]+
+);r.send(e.hasContent&&e.data||null),t=function(n,a){var s,o,c;if(t&&(a||4===r.readyState))if(delete Kt[l],t=void 0,r.onreadystatechange=ae.noop,a)4!==r.readyState&&r.abort();else{c={},s=r.status,
+,function(e){void 0===e.cache&&(e.cache=!1),e.crossDomain&&(e.type=
+,function(e){if(e.crossDomain){var t,n=fe.head||ae(
+))},n.insertBefore(t,n.firstChild)},abort:function(){t&&t.onload(void 0,!0)}}}});var en=[],tn=/(=)\?(?=&|$)|\?\?/;ae.ajaxSetup({jsonp:
+},function(e,t){ae.each({padding:
++e])):void 0===i?ae.css(t,n,l):ae.style(t,n,i,l)},t,r?i:void 0,r,null)}})}),ae.fn.size=function(){return this.length},ae.fn.andSelf=ae.fn.addBack,
+leading
+in n?n.trailing:a),n={},n.leading=i,n.maxWait=t,n.trailing=a,je(e,t,n)}function We(e,t){return m(t,16,[e])}function Ve(e,t,n){var i=typeof e;if(null==e||
+read
+add
+head
+,i.emulateJSON&&(r.data._method=a);var l=i.beforeSend;i.beforeSend=function(e){return e.setRequestHeader(
+,read:
+Backbone.history has already been started
+),this.history.replaceState({},document.title,this.root+this.fragment+r.search)),this.options.silent?void 0:this.loadUrl())},stop:function(){e.$(window).off(
+/api/session
+)?void i():void(!c||o(s,u,d,p)?t.get(s,function(n){t.finishLoad(e,r.strip,n,i)},function(e){i.error&&i.error(e)}):n([l],function(e){t.finishLoad(r.moduleName+
+;t.load(o,i,function(n){var i=function(e){return a(c,e)};i.asModule=function(e,t){return a.asModule(e,c,t)},t.write(e,o,i,r)},r)}},
+),t.get=function(e,t,i){try{var a=n.readFileSync(e,
+),s=new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(r),a)),o=
+,n.available(),a.nsIConverterInputStream.DEFAULT_REPLACEMENT_CHARACTER),l.readString(n.available(),o),l.close(),n.close(),t(o.value)}catch(c){throw new Error((s&&s.path||
+in d)||/(iPhone|iPad|iPod)/i.test(navigator.userAgent),f=
+});return a.closed=!1,a.config=e,a.DOM=n=a.DOM||a._getDOM(),n.wrap.addClass(e.skin),n.close[e.cancel===!1?
+),i.addClass(r)):(a.show().html(e||
+),g.focus=e,n.addClass(
+;return t.zIndex(),i.addClass(
+progid:DXImageTransform.Microsoft.AlphaImageLoader(src=
+aui_header
+aui_loading
+,minWidth:96,minHeight:32,padding:
+,t.end),o&&m[0].setCapture(),g.addClass(
+,title:!1,fixed:!0,lock:!0,opacity:.1,padding:
+padding: 0 1em;
+,opacity:.1,padding:void 0===n||n?
+,fixed:!0,lock:!0,opacity:.2,title:t,content:e,cancelVal:n,cancel:function(){}})},artDialog.loading=function(e){return artDialog({id:
+)}):$(art.dialog.list[this.config.id].DOM.wrap[0]).fadeOut(p),!1)}}).content(
+padding: 10px 10px 14px 39px; margin:8px 0 0 0
+,o.domain?
++o.domain:
+,c=function(e,t,n){var a;switch(null==n&&(n=1),n){case 1:return l={},i.loadBase?(a=e+(
+padding-left
+padding-top
+padding-bottom
+padding-right
+ldap
+ad
+).removeClass(t.navActive),e(this).addClass(t.navActive);var i=jQuery.cookie(
+).removeClass(t.navActive),e(this).addClass(t.navActive),
+).removeClass(t.navActive),e(this).addClass(t.navActive),location.hash=e(this).data(
+).removeClass(t.secNavActive),e(this).addClass(t.secNavActive),location.hash=e(this).find(
+);y.addClass(t.navActive),e(
+).addClass(t.secNavActive)}}})}}($),define(
+),!e.sLoadingRecords&&n&&
+===t.sLoadingRecords&&Pe(e,e,
+sLoadingRecords
+aDataSort
+);var n=t.aDataSort;n&&!e.isArray(n)&&(t.aDataSort=[n])}function c(t){if(!Ge.__browser){var n={};Ge.__browser=n;var i=e(
+),a.iDataSort!==i&&(n.aDataSort=[a.iDataSort]),Pe(n,a,
+!=typeof u&&(t._rowReadObject=!0),t.oFeatures.bSort||(n.bSortable=!1,s.addClass(l.sSortableNone)),t=-1!==e.inArray(
+:c}function x(e,t,n,i){e.aoColumns[n].fnSetData(e.aoData[t]._aData,i,{settings:e,row:t,col:n})}function k(t){return e.map(t.match(/(\\.|[^\.])+/g)||[
+_aData
+))&&T(t.rowId)(r,n),{data:r,cells:c}}function L(t,i,a,r){var l,s,o,c,u,d=t.aoData[i],p=d._aData,h=[];if(null===d.nTr){for(l=a||n.createElement(
+role
+)}function E(t,n){var i=n.nTr,a=n._aData;if(i){var r=t.rowIdFn(a);r&&(i.id=r),a.DT_RowClass&&(r=a.DT_RowClass.split(
+)).addClass(a.DT_RowClass)),a.DT_RowAttr&&e(i).attr(a.DT_RowAttr),a.DT_RowData&&e(i).data(a.DT_RowData)}}function j(t){var n,i,a,r,l,s=t.nTHead,o=t.nTFoot,c=0===e(
+).appendTo(s)),n=0,i=d.length;i>n;n++)l=d[n],a=e(l.nTh).addClass(l.sClass),c&&a.appendTo(r),t.oFeatures.bSort&&(a.addClass(l.sSortingClass),!1!==l.bSortable&&(a.attr(
+header
+).addClass(u.sHeaderTH),e(o).find(
+,null,[p,h._aData,a,c]),n.push(p),a++}else a=s.sZeroRecords,1==t.iDraw&&
+==Be(t)?a=s.sLoadingRecords:s.sEmptyTable&&0===t.fnRecordsTotal()&&(a=s.sEmptyTable),n[0]=e(
+aoHeaderCallback
+==u?u=n.sJUIHeader:
+,1):4===n.readyState&&Me(t,0,
+===a?n.aaData||n[a]:
+).addClass(n.sLength);return t.aanFeatures.l||(c[0].id=i+
+).addClass(t.oClasses.sPaging+n)[0],l=t.aanFeatures;return a||i.fnInit(t,n,r),l.p||(n.id=t.sTableId+
+:l.sScrollHead}).css({overflow:
+:l.sScrollHeadInner}).css({
+thead
+,r),t.nScrollHead=p,t.nScrollBody=l,t.nScrollFoot=h,t.aoDrawCallback.push({fn:he,sName:
+}),c[0]}function he(t){var n,a,r,l,s,o=t.oScroll,c=o.sX,u=o.sXInner,d=o.sY,o=o.iBarWidth,p=e(t.nScrollHead),g=p[0].style,m=p.children(
+),x=e(t.nTHead),k=e(t.nTable),C=k[0],T=C.style,D=t.nTFoot?e(t.nTFoot):null,I=t.oBrowser,A=I.bScrollOversize,M=rt(t.aoColumns,
+),P=[],L=[],E=[],j=[],N=function(e){e=e.style,e.paddingTop=
+,e.paddingBottom=
+thead, tfoot
+,n.nTHead),b=r.getAttribute(
+).css({width:a.sWidthOrig,margin:0,padding:0,border:0,height:1}));if(n.aoData.length)for(i=0;i<p.length;i++)y=p[i],a=l[y],e(ve(n,y)).clone(!1).append(a.sContentPadding).appendTo(S);for(e(
+,i)).addClass(r+(2>s?s+1:3))}t.aLastSort=l}function Te(e,t){var n,i=e.aoColumns[t],a=Ge.ext.order[i.sSortDataType];a&&(n=a.call(e.oInstance,e,t,g(e,t)));for(var r,l=Ge.ext.type.order[i.sType+
+stateLoadParams
+aoStateLoaded
+stateLoaded
+aaData
+fnStateLoadCallback
+aoStateLoadParams
+),T.renderer?e.isPlainObject(T.renderer)&&!T.renderer.header&&(T.renderer.header=
+<thead/>
+tables().header()
+table().header()
+,function(e){return e.nTHead},1)}),$e(
+==Be(e))F(e,t);else{de(e,!0);var a=e.jqXHR;a&&4!==a.readyState&&a.abort(),W(e,[],function(n){I(e);for(var n=$(e,n),i=0,a=n.length;a>i;i++)y(e,n[i]);F(e,t),de(e,!1)})}};He(
+ajax.reload()
+ajax.url().load()
+==typeof t?e.map(l,function(e){var n=a.aoData[e];return t(e,n._aData,n.nTr)?e:null}):(n=ot(lt(a.aoData,l,
+,function(e){for(var t=[],n=this.context,i=0,a=n.length;a>i;i++)for(var r=0,l=this[i].length;l>r;r++){var s=n[i].rowIdFn(n[i].aoData[this[i][r]]._aData);t.push((!0===e?
+rows.add()
+,function(e){var t=this.context;return e===i?t.length&&this.length?t[0].aoData[this[0]]._aData:i:(t[0].aoData[this[0]]._aData=e,M(t[0],this[0],
+row.add()
+).addClass(n),e(
+,i).addClass(n).html(t)[0].colSpan=m(r),l.push(i[0]))};s(t,n),a._details&&a._details.remove(),a._details=e(l),a._detailsShow&&a._details.insertAfter(a.nTr)}return this}),He([
+columns().header()
+column().header()
+,a)).detach();c.bVisible=t,N(n,n.aoHeader),N(n,n.aoFooter),De(n)}});return t!==i&&(this.iterator(
+,[e,i,t,n])}),(n===i||n)&&this.columns.adjust()),a}),$e(
+columns.adjust()
+state.loaded()
+,a.nScrollHead)[0]:null,l=a.nScrollFoot?e(
+,bRegex:!1,bSmart:!0},Ge.models.oRow={nTr:null,anCells:null,_aData:[],_aSortData:null,_aFilterData:null,_sFilterRow:null,_sRowStripe:
+,sSortingClass:null,sSortingClassJUI:null,sTitle:null,sType:null,sWidth:null,sWidthOrig:null},Ge.defaults={aaData:null,aaSorting:[[0,
++location.pathname))}catch(t){}},fnStateLoadParams:null,fnStateLoaded:null,fnStateSaveCallback:function(e,t){try{(-1===e.iStateDuration?sessionStorage:localStorage).setItem(
+,sLoadingRecords:
+},a(Ge.defaults),Ge.defaults.column={aDataSort:null,iDataSort:-1,asSorting:[
+,sContentPadding:
+,nTable:null,nTHead:null,nTFoot:null,nTBody:null,nTableWrapper:null,bDeferLoading:!1,bInitialised:!1,aoOpenRows:[],sDom:null,searchDelay:null,sPaginationType:
+,sScrollHead:
+,sScrollHeadInner:
+,sHeaderTH:
+,sJUIHeader:
+fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix
++Pt,sHeaderTH:Pt,sFooterTH:Pt,sJUIHeader:Et+
+),e.extend(!0,Ge.ext.renderer,{header:{_:function(t,n,i,a){e(t.nTable).on(
++a.sSortDesc).addClass(
+).addClass(a.sSortJUIWrapper).append(n.contents()).append(e(
+).addClass(a.sSortIcon+
++a.sSortJUIDescAllowed).addClass(
+),g[_add](w||r(t,n)||
+),a[_add](m||r(e,g)||
+).add(t.closest(_label)).off(
+,_add=
+,_mobile=/ipad|iphone|ipod|android|blackberry|windows phone|opera mini|silk/i.test(navigator.userAgent),e.fn[o]=function(r,l){var s=
+,width:f,height:f,margin:0,padding:0,background:
+:g.radioClass||
+).add(r.closest(_label)),k=!!g.aria,C=o+
+role=
+)}).css(p),g.inheritClass&&T[_add](l.className||
+))return;t(r,!1,!0)}else y&&(/ut|nd/.test(i)?(T[_remove](v),a[_remove](w)):(T[_add](v),a[_add](w)));if(!_mobile)return!1;n.stopPropagation()}}),r.on(_click+
+==t?_remove:_add](b)))}),f.on(_click+
++_touch,function(e){var n=e[_type],i=/wn|up/.test(n)?_:v;if(!l[h]){if(n==_click?t(r,!1,!0):(/wn|er|in/.test(n)?T[_add](i):T[_remove](i+
++_),x.length&&y&&i==v&&x[/ut|nd/.test(n)?_remove:_add](w)),!_mobile)return!1;e.stopPropagation()}})})}}(window.jQuery||window.Zepto),define(
+,d[i]).addClass(
+}}}),jQuery.fn.dataTableExt.renderer.header._=function(t,n,i,a){n.find(
+framework-header
+text!js/templates/header.html
+loginTip
+><%=json.user_name%></h4>\r\n                    <div><%=setUserRole(json.user_privilege)%></div>\r\n                </div>\r\n            </div>\r\n            <div class=
+><%=lang.login.loginTime%></div>\r\n                <div class=
+><%=json.logintime%></div>\r\n            </div>\r\n            <div class=
+><%=lang.login.onLineUser%></div>\r\n                <div class=
+><%=lang.login.viewDetails%></button></div>\r\n            </div>\r\n        </div>\r\n        <div class=
+><%=lang.login.logOut%></button>\r\n        </div>\r\n    </div>\r\n</div>
+/api/session/info
+/api/settings/service-sessions/?service_id=225
+admin_user_id
+})}void 0!==n.admin_user_id&&e.cookie(
+,n.admin_user_id,{path:
+,{language:A.langtype,callback:function(e,t){A.lang=e,A.render()}})},render:function(){A.isLogin()},isLogin:function(){var t=parent.location.search?parent.location.search.split(
+)?(n.$.ajaxSetup({headers:{
+)}}),A.showAppAll(),A.copySessionStorage()):location.href=
+/#/login
+,langpack:A.lang,isUser:A.isUserRole()};A.navAjax=e(
+).nav(t),A.navAjax.done(function(){A.tabMenu=this.tabMenuRes})},showHeader:function(){var n=this,i=t.template(f,{langtype:A.langtype,username:e.cookie(
+.framework-header
+};n.save(i,{success:function(n,i,a){A.hdmTime=i.timestamp,A.systemTime=(new Date).getTime(),window.sessionStorage.bmcVersion&&e(
+).html(window.sessionStorage.bmcVersion.split(
+).addClass(
+},clearGetUID:function(){void 0!==A.uidAlarm&&(clearTimeout(A.uidAlarm),A.uidAlarm=null)},getUserInfo:function(){var t=this;A.getUserSession=e.ajax({url:
+session_id
+#loginTip
+#sessionDetails
+,function(e){e.preventDefault(),e.stopPropagation(),r.showSession(n)}),e(
+].artCancel,function(){A.logout()})})},setUserRole:function(e){switch(e){case 2:return A.lang[
+].admin;case 6:case 7:case 8:case 9:case 10:return A.lang[
+)},getMessage:function(){var t=this;C=window.sessionStorage.getItem(
+),null===C&&(window.sessionStorage.setItem(
+,success:function(e,n,i){0===T?(window.sessionStorage.setItem(
+].num))},clearMessageID:function(){A.clearMessageAlarm(),I=!0,window.sessionStorage.setItem(
+),A.getMessage()},showMessage:function(){var t=this;update_id=window.sessionStorage.getItem(
+),i.length>0&&(I=!0,window.sessionStorage.setItem(
+].message,content:a,width:0,padding:
+,title:A.lang.dashboard.curSession,content:a,width:0,padding:
+)}})},_hdmTimestamp:function(e){var t=this,n=window.sessionStorage.getItem(
++A.lang.eventLog.emergency}},copySessionStorage:function(){e.cookie(
+)&&window.sessionStorage.setItem(
+)),window.sessionStorage.setItem(
+));var t=parseInt(window.sessionStorage.user_extendedpriv),n=0!==(1&t),i=0!==(2&t);n?window.sessionStorage.setItem(
+,1):window.sessionStorage.setItem(
+,0),i?window.sessionStorage.setItem(
+QSESSIONID=1;expires=Thu, 01 Jan 1970 00:00:00 GMT
+).focus()},isUserRole:function(){var e=!this.isBasicAccess();return e},isRemoteAccess:function(){return 1===parseInt(e.cookie(
+ldap_user
+ad_user
+fade
+==t?a.toggle():t&&a.setState(t)})}var n=function(t,i){this.$element=e(t),this.options=e.extend({},n.DEFAULTS,i),this.isLoading=!1};n.VERSION=
+,n.DEFAULTS={loadingText:
+loadingText
+);var d=e(this.$indicators.children()[this.getItemIndex(a)]);d&&d.addClass(
+)?(a.addClass(t),a[0].offsetWidth,i.addClass(l),a.addClass(l),i.one(
+)).addClass(
+),a.addClass(
+);if(this.$element.trigger(t),!t.isDefaultPrevented()){var n=this.dimension();this.$element[n](this.$element[n]())[0].offsetHeight,this.$element.addClass(
+).not(a).addClass(
+addClass
+[role=
+, [role=
+], [role=
+).load(this.options.remote,e.proxy(function(){this.$element.trigger(
+,{relatedTarget:t});this.$element.trigger(i),this.isShown||i.isDefaultPrevented()||(this.isShown=!0,this.checkScrollbar(),this.$body.addClass(
+==this.options.backdrop?this.$element[0].focus.call(this.$element[0]):this.hide.call(this))},this)),a&&this.$backdrop[0].offsetWidth,this.$backdrop.addClass(
+ role=
+,r),this.options.animation&&a.addClass(
+}).addClass(l).data(
+:l,a.removeClass(p).addClass(l)}var g=this.getCalculatedOffset(l,c,u,d);this.applyPlacement(g,l);var m=function(){i.$element.trigger(
+),10);isNaN(l)&&(l=0),isNaN(s)&&(s=0),t.top=t.top+l,t.left=t.left+s,e.offset.setOffset(i[0],e.extend({using:function(e){i.css({top:Math.round(e.top),left:Math.round(e.left)})}},t),0),i.addClass(
+==n&&c!=r&&(t.top=t.top+r-c);var u=this.getViewportAdjustedDelta(n,t,o,c);u.left?t.left+=u.left:t.top+=u.top;var d=u.left?2*u.left-a+o:2*u.top-r+c,p=u.left?
+fade in top bottom left right
+fade top bottom left right in
+load.bs.scrollspy.data-api
+),t.addClass(
+),l?(t[0].offsetWidth,t.addClass(
+,n.DEFAULTS={offset:0,target:window},n.prototype.getPinnedOffset=function(){if(this.pinnedOffset)return this.pinnedOffset;this.$element.removeClass(n.RESET).addClass(
+==o?this.getPinnedOffset():null,this.$element.removeClass(n.RESET).addClass(c).trigger(e.Event(c.replace(
+app-header
+app-header-item
+app-header-right
+tokens
+,width:!1,container:!1,hideDisabled:!1,showSubtext:!1,showIcon:!0,showContent:!0,dropupAuto:!0,header:!1,liveSearch:!1,liveSearchPlaceholder:null,liveSearchNormalize:!1,liveSearchStyle:
+),this.options.dropdownAlignRight&&this.$menu.addClass(
+,r=this.options.header?
++this.options.header+
+).append(t),e},reloadLi:function(){this.destroyLi();var e=this.createLi();this.$menu.find(
+ data-tokens=
+dropdown-header
+)&&this.$newElement.addClass(this.$element.attr(
+==t?this.$button.removeClass(n):(this.$button.removeClass(this.options.style),this.$button.addClass(n))},liHeight:function(){if(this.options.size!==!1){var e=this.$menu.parent().clone().children(
+),t=e.addClass(
+.dropdown-header
+).outerHeight(),i=this.options.header?t.find(
+headerHeight
+))+2,b=function(){
+n=a.$newElement.offset().top-m.scrollTop(),i=m.height()-n-s};if(b(),this.options.header&&r.css(
+,r=e(a),l=function(e){r.addClass(e.attr(
+)},checkDisabled:function(){var e=this;this.isDisabled()?this.$button.addClass(
+)),setTimeout(function(){t.setSelected(a,!1)},10),_.delay(750).fadeOut(300,function(){e(this).remove()})}}}else s.prop(
+li.divider, li.dropdown-header
+),r.parent().addClass(
+).length&&t.addClass(
+).eq(0).addClass(
+[role=menu] li a
+):(f.setSize(),f.$menu.parent().addClass(
+[role=menu] li:not(.divider):not(.dropdown-header):visible
+),i.eq(a).addClass(
+),f.$button.focus())}},mobile:function(){this.$element.addClass(
+.bootstrap-select [data-toggle=dropdown], .bootstrap-select [role=menu], .bs-searchbox input
+load.bs.select.data-api
+h3c-radio
+ readonly disabled value=
+input:radio[name=
+,radioClass:
+,function(){$(this).addClass(
+===s?t.href||i:i)&&n(t)}function n(t){return e.expr.filters.visible(t)&&!e(t).parents().addBack().filter(function(){return
+)})}}),e.fn.addBack||(e.fn.addBack=function(e){return this.add(null==e?this.prevObject:this.prevObject.filter(e))}),e(
+==typeof e?i[e]:e).apply(i,arguments)}var i=this;return setTimeout(n,t||0)},_hoverable:function(t){this.hoverable=this.hoverable.add(t),this._on(t,{mouseenter:function(t){e(t.currentTarget).addClass(
+)}})},_focusable:function(t){this.focusable=this.focusable.add(t),this._on(t,{focusin:function(t){e(t.currentTarget).addClass(
+fadeIn
+fadeOut
+,l=[];for(n=i.values&&i.values.length||1,a.length>n&&(a.slice(n).remove(),a=a.slice(0,n)),t=a.length;n>t;t++)l.push(r);this.handles=a.add(e(l.join(
+ui-slider-range ui-widget-header ui-corner-all
+).focus(),o=r.offset(),c=!e(t.target).parents().addBack().is(
+).iCheck({radioClass:
+,function(n){t.call(e)})})},boot:function(){new c},fusionPar:function(){new u}});return d});var dbits,canary=0xdeadbeefcafe,j_lm=15715070==(16777215&canary);j_lm&&
+],function(){}),RSAKey.prototype.doPublic=RSADoPublic,RSAKey.prototype.setPublic=RSASetPublic,RSAKey.prototype.encrypt=RSAEncrypt,define(
+,b64padchar=
+text!js/templates/login.html
+login-header
+login-logo
+login-tool
+login-language
+login-help
+login-content
+><%= lang.login.hdmVersion%> <%=hdm_version%></p>\r\n                    <p class=
+><%= lang.login.hostName%><%=host_name%></p>\r\n            </div>\r\n            <%if(isG5){%>\r\n            <div class=
+login-box
+login-box-content
+login-username
+login-password
+login-notice
+login-btn
+btn-login
+ login-switch <%if(safeSwitch === 0){%>hide<%}%>
+login-footer
+>\r\n\t<div><%=lang.login.retrievePasswdText%></div>\r\n\t<div class=
+js/views/loginView
+,0),t.fetchAll=4,t.getLoginInfo()},getLoginInfo:function(){var e=this;e.getFruInfo(),e.getHostName(),e.getVersionInfo(),e.getTfaStatus()},getFruInfo:function(){var e=this,t={type:
++i[0].bmc_vrbd_revision),window.sessionStorage.setItem(
+login_delay_flag
+#login-box .btn-login
+,!0),t.login()}))},error:function(n,i,a){e.cookie(
+,!0),t.login()}))}})},getSafeSwitch:function(){var t=this,n=new g;n.fetch({success:function(n,i,a){e.cookie(
+}),t.getOemFlag()}})},getOemInfo:function(){var e=this;_getOemInfo=new m,_getOemInfo.fetch({success:function(t,n,i){e.showLogin(n)},error:function(t,n,i){var a={copy_right_cn:
+};e.showLogin(a)}})},getOemFlag:function(){var t,n=this;_getOemFlag=new v,_getOemFlag.fetch({success:function(i,a,r){switch(e.cookie(
+},n.showLogin(t);break;case 3:n.getOemInfo();break;default:t={copy_right_cn:
+},n.showLogin(t)}},error:function(e,i,a){t={copy_right_cn:
+},n.showLogin(t)}})},showLogin:function(n){this.isFistLogin();var i=parseInt(e.cookie(
+#login-logo
+LOGININ_RESET_TIME
+)?void this.fistLogin():0},fistLogin:function(){var t=this;if(void 0!==e.cookie(
+))t.sendRometeLogin(e.cookie(
+),log_type:1,Remotelogin_RSA:1,Remote_RSA_Value:e.cookie(
+))},this.sendLogin(n,!0)}},placeholderShow:function(){e(
+,s.lang.login.usernamePlaceholder).myPlaceholder().focus(),e(
+,s.lang.login.passwordPlaceholder).myPlaceholder(),e(
+,s.lang.login.dynamicPwdPlaceholder).myPlaceholder()},login:function(){var t=new RSAKey;t.setPublic(e.cookie(
+#login-username
+#login-password
+,this.validateLoginData(n)){var i=n.username;n.username=linebrk(hex2b64(t.encrypt(e(
+,!1)},validateLoginData:function(t){return e(
+).html(s.lang.login.noticeNameRules),e(
+).html(s.lang.login.noticePwdEmpty),e(
+).html(s.lang.login.noticeNameEmpty),e(
+).show(),!1)},sendRometeLogin:function(t){e(
+/api/remote/login/session
+,data:{key:t},timeout:3e4,success:function(e,t,i){art.dialog.clearWait(),window.sessionStorage.setItem(
+,e.username),n.isLoginSuccessFunc(e,Base64.decode(Base64.decode(e.username)))},error:function(t,n,i){art.dialog.clearWait(),e(
+.login-notice
+,!1)}})},sendLogin:function(t,n,i){e(
+,data:t,timeout:3e4,success:function(e,r,l){art.dialog.clearWait(),n?(window.sessionStorage.setItem(
+,t.username),a.isLoginSuccessFunc(e,t.username)):(window.sessionStorage.setItem(
+,i),a.isLoginSuccessFunc(e,i))},error:function(t,n,i){art.dialog.clearWait(),e(
+,!1)}})},isLoginSuccessFunc:function(t,n){var i=this;e(
+);var o=0;if(0===t.password_modify&&(a=s.lang.login.isUseDefaultPassword,e.cookie(
+].artMessage,function(e){i.enterHome(t,n)}):i.enterHome(t,n)}else 1===t.cc?t.login_fail_time>0?(e(
+).html(s.lang.login.noticeErrNamePwd),e(
+).html(s.lang.login.adOrLDAPError),e(
+).html(s.lang.login.sessionOverflow),e(
+).html(s.lang.login.noPrivilege),e(
+).html(s.lang.login.updatingError),e(
+).html(s.lang.login.loginCheckPwdLefted),e(
+).html(s.lang.login.keyInvaild):e(
+).html(s.lang.login.errorLogin),e(
+).html(s.lang.login.dynamicPwdError),e(
+).html(s.lang.login.errorDelayed+
++s.lang.login.errorSeconds),e(
+,!0),n.login()}))},1e3)},enterHome:function(t,n){e.cookie(
+,t.CSRFToken,{path:
+}),e.ajaxSetup({headers:{
+:t.CSRFToken}}),this.setSessionStorage(t),e.cookie(
+}),s.clearGetPower(),s.clearGetUID(),s.clearMessageAlarm(),window.sessionStorage.removeItem(
+},setSessionStorage:function(e){window.sessionStorage.setItem(
+,e.CSRFToken),window.sessionStorage.setItem(
+,e.privilege),window.sessionStorage.setItem(
+,e.extendedpriv),window.sessionStorage.setItem(
+,e.user_extendedpriv),window.sessionStorage.setItem(
+,e.racsession_id);var t=parseInt(window.sessionStorage.user_extendedpriv),n=0!==(1&t),i=0!==(2&t);n?window.sessionStorage.setItem(
+,0)},loginSetLang:function(){var t=s.langtype;
+}),location.reload()},bindAllBtn:function(){var t=this,n=null,i=0;e(
+.login-language
+,function(e){e.preventDefault(),t.loginSetLang()}),e(document).keydown(function(t){var n=t.which;return 13===n?(e(
+.login-help
+,title:s.lang.login.retrievePasswd,content:i,cancel:!0,padding:0,width:400,lock:!0,cancelVal:s.lang[
+,data:n,timeout:3e4,success:function(e,t,n){art.dialog.clearWait();var i=s.lang.login.retrievePwCode[e.cc]?s.lang.login.retrievePwCode[e.cc]:s.lang.login.retrievePwError;art.dialog.alert(i,s.lang[
+].artMessage,function(e){})},error:function(e,t,n){art.dialog.clearWait(),art.dialog.alert(s.lang.login.retrievePwError,s.lang[
+serverAddress
+><%=lang.fwUpdate.serverAddress%></div>\r\n                        <div class=
+server_Address
+<%=fwLocation.server_address%>
+><%=lang.fwUpdate.deviceReady%></div>\r\n                        <div class=
+btn btn-upload
+><%=lang.fwUpdate.uploadFileView%></label>\r\n                            <p id=
+ ><%=lang.fwUpdate.uploadFileView%></label>\r\n\t\t\t\t\t\t\t\t<p id=
+><%=lang.fwUpdate.uploadProgress%>0%</div>\r\n\t\t\t\t\t</div>\r\n\t        \t</div>\r\n\t        </div>\r\n\t    </div>\r\n\t</div>\r\n</div>
+><%=lang.fwUpdate.upgrade%>:</div>\r\n\t\t\t\t\t\t<div class=
+upgrade
+fwUpUdataDatebase
+  >\r\n\t\t\t\t\t\t<thead>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<th class=
+/api/maintenance/firmware/upgrade
+].wait),F.fetch({success:function(t,n,i){art.dialog.clearWait(),0===n.cc?e.sendBrowserRefresh():209===n.cc&&art.dialog.alert(s.lang.login.updatingError,s.lang[
+].cancelBtn,function(){e.initialize()})},error:function(t,n,i){200===n.status?location.reload():(art.dialog.clearWait(),art.dialog.confirm(s.lang.fwUpdate.fetchFwStepFail,s.lang[
+#serverAddress
+#server_Address
+).html(s.lang.protocolConfig.serverAddressValid)):IP.checkAll(n)||checkIPV6(n,!1,!1)?isBlank(i)?(e(
+).val(),server_address:e(
+===this.firmwareType){var a=this.uploadFile?this.uploadFile.size:0;i=jsonToStr({ima_size:a})}e.ajax({url:
+===t?n.uploadMd5File&&n.uploadMd5File.name&&
+===n.firmwareType?n.uploadMd5():n.uploadFw():n.downloadFWImage()},error:function(e,t,i){art.dialog.clearWait(),403===e.status?art.dialog.alert(s.lang[
+].message,function(e){n.initialize()})}})},uploadMd5:function(){art.dialog.clearWait(),art.dialog.showWait(s.lang[
+].wait);var t=this,n=null,i=new FormData;n=this.uploadMd5File,i.append(
+,cache:!1,success:function(e,n,i){a&&a.abort(),t.uploadFw()},error:function(e,n,i){art.dialog.clearWait(),403===e.status?art.dialog.alert(s.lang[
+].message,function(e){t.initialize()}):art.dialog.alert(s.lang.fwUpdate.uploadMD5FailToStep1,s.lang[
+].message,function(e){t.initialize()})}})},uploadFw:function(){art.dialog.clearWait(),art.dialog.showWait(s.lang[
+;n=new Blob([this.uploadFile,l],{type:
+}),n.name=this.uploadFile.name,n.lastModifiedDate=this.uploadFile.lastModifiedDate,n.lastModified=this.uploadFile.lastModified,n.type=this.uploadFile.type}else n=this.uploadFile;i.append(
+,cache:!1,xhr:function(){var t=e.ajaxSettings.xhr();return t.upload&&t.upload.addEventListener(
+,function(t){if(t.lengthComputable){var n=Math.floor(t.loaded/t.total*100);e(
+).html(s.lang.fwUpdate.uploadProgress+n+
+].message,function(e){t.firstStep(),t.initialize()}):art.dialog.alert(s.lang.fwUpdate.uploadFwFailToStep1,s.lang[
+].message,function(e){t.firstStep(),t.initialize()})}})},downloadFWImage:function(){art.dialog.clearWait(),art.dialog.showWait(s.lang[
+,success:function(e,t,i){n.downloadFWStatus()},error:function(e,t,i){art.dialog.clearWait(),403===e.status?art.dialog.alert(s.lang[
+].message,function(e){n.initialize()})}})},downloadFWStatus:function(){art.dialog.clearWait(),art.dialog.showWait(s.lang[
+].message,function(e){t.initialize()})}})},downloadProgress:function(t){var n=this,i=parseInt(t,10);100>i?(setTimeout(function(){n.downloadFWStatus.call(n)},2500),e(
+).html(s.lang.fwUpdate.uploadProgress+i+
+).html(s.lang.fwUpdate.uploadProgress+
+,function(){t.coverHeader()}),t.coverHeader()},coverHeader:function(){0!==e(
+#app-header
+);e(t).addClass(
+#upgrade
+isUpgrade
+#fwUpUdataDatebase tbody
+#fwUpUdataDatebase
+#fwUpUdataDatebase thead tr th:eq(0)
+).html(0===t.upgrade_config?s.lang.fwUpdate.repoUpdateType3_1:s.lang.fwUpdate.repoUpdateType3_2).parents(
+),g=t.fw_type_name},upgrade:function(t){art.dialog.clearWait(),art.dialog.showWait(s.lang[
+,5):art.dialog.msg(s.lang.fwUpdate.upgradeFail,
+):art.dialog.msg(s.lang.fwUpdate.upgradeFail,
+,5)}})},upgradeCPLD:function(e){art.dialog.clearWait(),art.dialog.showWait(s.lang[
+,5)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(s.lang.fwUpdate.upgradeFail,
+#page-content .btn-upload
+btn-file-upload-disabled
+,a=!0;this.uploadFile=e(
+).val())?this.uploadMd5File=e(
+)[0].files[0]:this.uploadMd5File=
+)):0,upgrade_config:parseInt(e(
+#fwUpUdataDatebase tbody tr
+.isUpgrade
+].cancelBtn,function(){n.step3(),n.upgradeCPLD(t),n.clearCheckFlashState()}):
+].cancelBtn,function(){n.step3(),n.upgradeCPLD(t),n.clearCheckFlashState()}):art.dialog.warn(s.lang.fwUpdate.selectGPU,s.lang[
+].cancelBtn,function(){n.step3(),n.upgrade(t),n.clearCheckFlashState()})},step2ToStep1:function(){var e=this;art.dialog.confirm(s.lang.fwUpdate.firstStepSure,s.lang[
+,title:s.lang.fwUpdate.biosUpdateTypeOption,content:a,cancel:!0,width:650,padding:0,lock:!0,cancelVal:s.lang[
+):jQuery)}(function(e){e.extend({showMain:function(t){var n={headerClass:
+},t=e.extend({},n,t),i=e(t.headerClass),a=e(t.mainClsss),r=e(t.secondaryClass);a.html(t.mainTemplate),e(
+>\r\n                <thead>\r\n                    <tr>\r\n                        <th class=
+padding-left:5px;
+:e[t]=r.lang.hardwareInfo.aep.ADMode;break;case
+>\r\n        <thead>\r\n            <tr>\r\n                <th class=
+padding: 0
+===s?l-n.width/2:l,u-n.height/2,n.width,n.height);var d=n.textPadding;d&&(l=kn(l,s,d),u-=n.height/2-d[2]-n.textHeight/2),yn(t,
+,M(o.textShadowBlur,i.textShadowBlur,0)),yn(t,
+,o.textShadowColor||i.textShadowColor||
+shadowOffsetX
+shadowOffsetY
+shadowBlur
+shadowColor
+padding:0
+ not exists. Load it first.
+:n+=h[m++],i+=h[m++],u=s.L,l.addData(u,n,i);break;case
+:n=h[m++],i=h[m++],u=s.L,l.addData(u,n,i);break;case
+:n+=h[m++],i+=h[m++],u=s.M,l.addData(u,n,i),a=n,r=i,p=
+:n=h[m++],i=h[m++],u=s.M,l.addData(u,n,i),a=n,r=i,p=
+:n+=h[m++],u=s.L,l.addData(u,n,i);break;case
+:n=h[m++],u=s.L,l.addData(u,n,i);break;case
+:i+=h[m++],u=s.L,l.addData(u,n,i);break;case
+:i=h[m++],u=s.L,l.addData(u,n,i);break;case
+:u=s.C,l.addData(u,h[m++],h[m++],h[m++],h[m++],h[m++],h[m++]),n=h[m-2],i=h[m-1];break;case
+:u=s.C,l.addData(u,h[m++]+n,h[m++]+i,h[m++]+n,h[m++]+i,h[m++]+n,h[m++]+i),n+=h[m-2],i+=h[m-1];break;case
+:v=n,b=i;var T=l.len(),D=l.data;t===s.C&&(v+=n-D[T-4],b+=i-D[T-3]),u=s.C,k=h[m++],C=h[m++],n=h[m++],i=h[m++],l.addData(u,v,b,k,C,n,i);break;case
+:v=n,b=i;var T=l.len(),D=l.data;t===s.C&&(v+=n-D[T-4],b+=i-D[T-3]),u=s.C,k=n+h[m++],C=i+h[m++],n+=h[m++],i+=h[m++],l.addData(u,v,b,k,C,n,i);break;case
+:k=h[m++],C=h[m++],n=h[m++],i=h[m++],u=s.Q,l.addData(u,k,C,n,i);break;case
+:k=h[m++]+n,C=h[m++]+i,n+=h[m++],i+=h[m++],u=s.Q,l.addData(u,k,C,n,i);break;case
+:v=n,b=i;var T=l.len(),D=l.data;t===s.Q&&(v+=n-D[T-4],b+=i-D[T-3]),n=h[m++],i=h[m++],u=s.Q,l.addData(u,v,b,n,i);break;case
+:v=n,b=i;var T=l.len(),D=l.data;t===s.Q&&(v+=n-D[T-4],b+=i-D[T-3]),n+=h[m++],i+=h[m++],u=s.Q,l.addData(u,v,b,n,i);break;case
+===i&&(n=ya(n,a.getBoundingRect())),wa(a,n)),a}function _a(e,t,n){var i=new Dn({style:{image:e,x:t.x,y:t.y,width:t.width,height:t.height},onload:function(e){if(
+,!(e.isGroup||!n&&e.useHoverLayer)){var a=e,r=e.style;i&&(a=n.addHover(e),r=a.style),Xa(r),i||Ta(a),r.extendFrom(t),Ia(r,t,
+),i),e.textPadding=t.getShallow(
+),e.textBorderRadius=t.getShallow(
+),e.textBoxShadowColor=t.getShallow(
+),e.textBoxShadowBlur=t.getShallow(
+),e.textBoxShadowOffsetX=t.getShallow(
+),e.textBoxShadowOffsetY=t.getShallow(
+)),e.textShadowColor=t.getShallow(
+)||n.textShadowColor,e.textShadowBlur=t.getShallow(
+)||n.textShadowBlur,e.textShadowOffsetX=t.getShallow(
+)||n.textShadowOffsetX,e.textShadowOffsetY=t.getShallow(
+)||n.textShadowOffsetY}function qa(e,t){return
+display:inline-block;vertical-align:middle;margin-right:8px;margin-left:3px;border-radius:4px;width:4px;height:4px;background-color:
+display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:
+===e.type?(Pl(e.breadcrumb,
+barBorderRadius
+);var p=new Cw({shape:{points:u},incremental:!!n,__startPoint:d,__baseDimIdx:r,__largeDataIndices:l,__barWidth:s,silent:!0,z2:0});Vu(p,o,i),t.add(p)}var h=new Cw({shape:{points:i.getLayout(
+)},incremental:!!n,__startPoint:a,__baseDimIdx:r,__largeDataIndices:l,__barWidth:s});t.add(h),Wu(h,e,i),h.seriesIndex=e.seriesIndex,e.get(
+),u=0;u<c.length;u++)e.group.add(c[u]);return c}}function Ku(e,t,n){var i=t.axis,a=t.getModel(
++u),p=0;p<d.length;p++)e.group.add(d[p])}}function Zu(e,t,n){var i=t.axis,a=I(n.axisLabelShow,t.get(
+shadowStyle
+radius
+),i)),isNaN(a)&&(a=e.valueStart);var r=e.baseDataOffset,l=[];return l[r]=n.get(e.baseDim,i),l[1-r]=a,t.dataToPoint(l)}function Dd(e,t){var n=[];return t.diff(e).add(function(e){n.push({cmd:
+,idx:e})}).execute(),n}function Id(e){return isNaN(e[0])||isNaN(e[1])}function Ad(e,t,n,i,a,r,l,s,o,c){return
+borderRadius
+),a.value=r.value,a.seriesDataIndices=(r.payloadBatch||[]).slice()):!t.useHandle&&(a.status=
+shadow
+,textPadding:o,fill:m,stroke:s.get(
+)||0,shadowBlur:s.get(
+),shadowColor:s.get(
+),shadowOffsetX:s.get(
+),shadowOffsetY:s.get(
+padding:
+[object CanvasGradient]
+,textRect:null,textOffset:null,textAlign:null,textVerticalAlign:null,textDistance:5,textShadowColor:
+,textShadowBlur:0,textShadowOffsetX:0,textShadowOffsetY:0,textBoxShadowColor:
+==typeof e?this[e]=t:this.extendFrom(e,!0)},clone:function(){var e=new this.constructor;return e.extendFrom(this,!0),e},getGradient:function(e,t,n){for(var i=
+,a.padding=0,a.margin=0,a[
+textShadowBlur
+textShadowOffsetX
+textShadowOffsetY
+textShadowColor
+ has been used already
+paddingLeft
+paddingTop
+paddingRight
+paddingBottom
+,brush:function(e,t){var n=this.style;this.__dirty&&on(n,!0),n.fill=n.stroke=n.shadowBlur=n.shadowColor=n.shadowOffsetX=n.shadowOffsetY=null;var i=n.text;return null!=i&&(i+=
+radial
+],gradientColor:[
+radiusAxis
+radar
+)}),rb(Rl(e.radar),function(e){El(e,
+,radar:
+loading
+,spinnerRadius:10,lineWidth:5,zlevel:0});var n=new pf,i=new Um({style:{fill:t.maskColor},zlevel:t.zlevel,z:1e4});n.add(i);var a=t.fontSize+
+,textDistance:10,textFill:t.textColor},zlevel:t.zlevel,z:10001});if(n.add(r),t.showSpinner){var l=new Hm({shape:{startAngle:-Rb/2,endAngle:-Rb/2+.1,r:t.spinnerRadius},style:{stroke:t.color,lineCap:
+!==t&&(e.context.payload=t)},Ob=Ts(0);ms.wrapStageHandler=function(e,t){return w(e)&&(e={overallReset:e,seriesType:As(e)}),e.uid=gr(
+,defaultOption:{seriesLayoutBy:Gv,sourceHeader:null,dimensions:null,source:null},optionUpdated:function(){nl(this)}}),xb.extend({type:
+,i=aa(n);return js(t,i),Rs(e,i,this._defs),i}},Zb={lineargradient:function(e){var t=parseInt(e.getAttribute(
+)||0,10),r=new Qm(t,n,i,a);return Es(e,r),r},radialgradient:function(){}},e_={fill:
+),i=e&&e.silent;this[D_]=!0,n&&$s(this),P_.update.call(this),this[D_]=!1,Ys.call(this,i),Xs.call(this,i)}}},M_.showLoading=function(e,t){if(!this._disposed&&(u_(e)&&(t=e,e=
+LinearGradient
+RadialGradient
+,borderRadius:0,shadowBlur:0,shadowColor:null,shadowOffsetX:0,shadowOffsetY:0,opacity:1}}});var gw=yg([[
+,h),f[a]=v}if(i.hasValue(a)){if(o){var b=Sw[r.type](c,g);if(b)return void n.remove(_)}var _=xw[r.type](a,g,t,s,!1,u);i.setItemGraphicEl(a,_),n.add(_),Fu(_,i,a,l,g,e,t,
+).getLineStyle());this.group.add(new Wm({anid:
+,render:function(e,t,n,i){this.group.removeAll();var a=this._axisGroup;if(this._axisGroup=new pf,this.group.add(this._axisGroup),e.get(
+)){var r=e.getCoordSysModel(),l=hd(r,e),s=new Iw(e,l);h(Fw,s.add,s),this._axisGroup.add(s.getGroup()),h(Bw,function(t){e.get(t+
+)&&this.group.add(new Um({shape:e.coordinateSystem.getRect(),style:s({fill:e.get(
+,a),e.setItemGraphicEl(i,s),n.add(s)}}).update(function(s,o){var c=a.getItemGraphicEl(o),u=e.getItemLayout(s);return wd(e,u,s,t)?(c?(c.updateData(e,s,l),Za(c,{position:u},i)):(c=new r(e,s),c.attr(
+,init:function(){var e=new pf,t=new yd;this.group.add(t.group),this._symbolDraw=t,this._lineGroup=e},render:function(e,t,n){var i=e.coordinateSystem,a=this.group,r=e.getData(),l=e.getModel(
+),S=w&&!u&&Ud(e,r,i),x=this._data;x&&x.eachItemGraphicEl(function(e,t){e.__temp&&(a.remove(e),x.setItemGraphicEl(t,null))}),w||p.remove(),a.add(g);var k,C=!u&&e.get(
+],radius:[0,
+);if(a.diff(r).add(function(e){var t=new $d(a,e);o&&
+,d),a.setItemGraphicEl(e,t),l.add(t)}).update(function(e,t){var n=r.getItemGraphicEl(t);o||
+,d),l.add(n),a.setItemGraphicEl(e,n)}).remove(function(e){var t=r.getItemGraphicEl(e);l.remove(t)}).execute(),s&&a.count()>0&&(o?
+,borderWidth:0,padding:5,itemGap:10,textStyle:{fontSize:18,fontWeight:
+,borderRadius:0,borderWidth:0,padding:5,itemGap:10,itemWidth:25,itemHeight:14,inactiveColor:
+},selectedMode:!0,selector:!1,selectorLabel:{show:!0,borderRadius:10,padding:[3,5,3,5],fontSize:12,fontFamily:
+===l))return void s.add(new CS({newline:!0}));var d=n.getSeriesByName(l)[0];if(!o.get(l))if(d){var p=d.getData(),h=p.getVisual(
+})}});a.add(r);var l=t.getModel(
+),S=w.parentModel;a=y||a;var x=Gc(a,0,0,d,p,v?o:h,null==g||g);if(b.add(Kd(x,a,m,c,f,v)),!y&&r&&(r!==a||
+);var C=Gc(r,(d-k)/2,(p-k)/2,k,k,v?o:h,null==g||g);b.add(Kd(C,r,m,c,f,v))}var T=
+==typeof I&&(A=I(e)),b.add(new Dm({style:za({},_,{text:A,x:T,y:p/2,textFill:v?_.getTextColor():h,textAlign:D,textVerticalAlign:
+,!0)[t.getOrient().name][n],{onclick:b(o._pageGo,o,a,t,i)},{x:-u[0]/2,y:-u[1]/2,width:u[0],height:u[1]});r.name=e,c.add(r)}var o=this;LS.superCall(this,
+);c.add(new Dm({name:
+},shadowStyle:{color:
+,padding:[5,7,5,7],backgroundColor:
+,borderColor:null,borderWidth:0,shadowBlur:3,shadowColor:
+,shadowBlur:3,shadowColor:
+,shadowOffsetX:0,shadowOffsetY:2,throttle:40}}}),oi()),US=h,OS=Ao({type:
+,subPixelOptimize:!0,shape:i}},shadow:function(e,t,n){var i=Math.max(1,e.getBandWidth()),a=n[1]-n[0];return{type:
+,borderRadius:4,borderWidth:0,padding:5,extraCssText:
+)>-1?{textWidth:4,textHeight:4,textBorderRadius:2,textBackgroundColor:t[c],textOffset:[3,0]}:{textWidth:10,textHeight:10,textBorderRadius:5,textBackgroundColor:t[c]},a=a.substr(o+1),s=a.indexOf(
+),textBorderRadius:n.get(
+),textPadding:n.get(
+)}),this._zr.add(this.el);var u=this;this.el.on(
+,function(){n.getAll++,$(this).addClass(
+,showDelay:0,hideDelay:0,borderRadius:10,formatter:function(t){var n=
+},toolbox:{show:!0,feature:{mark:{show:!1},dataView:{show:!1,readOnly:!1},magicType:{show:!1,type:[
+,selectedMode:!1},toolbox:{show:!0,feature:{mark:{show:!1},dataView:{show:!1,readOnly:!1},magicType:{show:!1,type:[
+padding-left: 26px;
+padding-left: 40px;
+>\r\n                                                <% _.each(fpgaData.fpga_info, function(e,k){ %>\r\n                                                <li class=
+padding-left: 37px;
+),e(this).addClass(
+padding-left: 12px;
+padding-left: 15px;
+):e(this).addClass(
+),$(this).addClass(
+readSeg
+Bad Marker! at +
+)}var l=16,s=16,o=1e6;t.prototype={setup:function(e,t,n){this.movieDesc.w=e,this.movieDesc.h=t,this.movieDesc.fps=n},addCanvasFrame:function(e){var t=e.toDataURL(
+],c=0;i>c;c++){var u=this.addVideoStreamData(this.moviLIST.aStreams,this.frameList[c]);a.push({chId:
+,dwSize:16*a.length,aData:a,_order:[
+aData
+download
+download_Video_file
+,dwSize:0,aData:null,_order:[
+dwPaddingGranularity
+]}},t.createHeaderLIST=function(){return{chLIST:
+,aData:null,_order:[
+]}},t.createStreamHeaderLIST=function(){return{chLIST:
+]}},t.createStreamHeader=function(){return{chFourCC:
+]}},t.createBitmapHeader=function(){return{dwSize:40,dwWidth:10,dwHeight:20,wPlanes:1,wBitcount:24,chCompression:
+]}},readSegDQT:function(e,t,n){function i(n){var i=a(e,t++);++r;for(var l=64,s=new ArrayBuffer(l),o=new Uint8Array(s),c=0;l>c;c++)o[c]=e[t++],++r;n.push({bPT:i,rawTable:s,_order:[
+]};for(t+=2;n>r;)i(l.aTables);return l},readSegSOF0:function(e,t,n){function r(n){n.push({b1:a(e,t),b2:a(e,t+1),b3:a(e,t+2),_order:[
+]}),t+=2;return i},readSegDHT:function(e,t,n){var i={W_Marker:0,W_Size:n,bType:a(e,t+2),rawTable:null,_order:[
+,[],function(){return t})}(window);var decode_worker=function(){function e(){if(self.queue.length){var t=self.queue.shift();t.buffer,c.decode(t.header,t.buffer),self.postMessage({cmd:
+}],heading:
+!=typeof e||e instanceof Array))return e.get(this,t);if(e instanceof Array&&3!=e.length)return this.readStruct(e,t);var n=null,i=null,a=
+:n=this.readUint8();break;case
+:n=this.readInt8();break;case
+:n=this.readUint16(this.endianness);break;case
+:n=this.readInt16(this.endianness);break;case
+:n=this.readUint32(this.endianness);break;case
+:n=this.readInt32(this.endianness);break;case
+:n=this.readFloat32(this.endianness);break;case
+:n=this.readFloat64(this.endianness);break;case
+:n=this.readUint16(DataStream.BIG_ENDIAN);break;case
+:n=this.readInt16(DataStream.BIG_ENDIAN);break;case
+:n=this.readUint32(DataStream.BIG_ENDIAN);break;case
+:n=this.readInt32(DataStream.BIG_ENDIAN);break;case
+:n=this.readFloat32(DataStream.BIG_ENDIAN);break;case
+:n=this.readFloat64(DataStream.BIG_ENDIAN);break;case
+:n=this.readUint16(DataStream.LITTLE_ENDIAN);break;case
+:n=this.readInt16(DataStream.LITTLE_ENDIAN);break;case
+:n=this.readUint32(DataStream.LITTLE_ENDIAN);break;case
+:n=this.readInt32(DataStream.LITTLE_ENDIAN);break;case
+:n=this.readFloat32(DataStream.LITTLE_ENDIAN);break;case
+:n=this.readFloat64(DataStream.LITTLE_ENDIAN);break;case
+:n=this.readCString(i);break;case
+:n=this.readString(i,a);break;case
+:n=this.readUCS2String(i,this.endianness);break;case
+:n=this.readUCS2String(i,DataStream.LITTLE_ENDIAN);break;case
+:n=this.readUCS2String(i,DataStream.BIG_ENDIAN);break;default:if(3==e.length){var s=e[1],o=e[2],c=0;if(c=
+:n=this.readUint8Array(c);break;case
+:n=this.readUint16Array(c,d);break;case
+:n=this.readUint32Array(c,d);break;case
+:n=this.readInt8Array(c);break;case
+:n=this.readInt16Array(c,d);break;case
+:n=this.readInt32Array(c,d);break;case
+:n=this.readFloat32Array(c,d);break;case
+:n=this.readFloat64Array(c,d);break;case
+:if(null===c)for(n=[];!this.isEof();){var p=this.readType(s,t);if(null===p)break;n.push(p)}else{n=new Array(c);for(var h=0;c>h;h++)n[h]=this.readType(s,t)}}}else if(
+,self.addEventListener(
+==t.data.cmd?(c.setImageBuffer(t.data.imageBuffer),self.timer&&clearTimeout(self.timer),e()):(self.queue.push({buffer:t.data.buffer,header:t.data.header}),self.timer&&clearTimeout(self.timer),e())})};
+#download_Video_file
+:if(null==c)for(n=[];!this.isEof();){var p=this.readType(s,t);if(null==p)break;n.push(p)}else{n=new Array(c);for(var h=0;c>h;h++)n[h]=this.readType(s,t)}}}else if(
+,function(){var e=.75*Math.min(window.innerWidth/n.currentFrameHeader.SourceModeInfo.X,window.innerHeight/n.currentFrameHeader.SourceModeInfo.Y);n.$canvas.css({
+>\r\n                            <%=lang.videoReplay.download%></button>\r\n                        <div id=
+video-shade
+#download
+);t.downloadVideo(i)}),e(
+,title:r.lang.videoReplay.setting,content:a,cancel:!0,width:520,padding:0,lock:!0,cancelVal:r.lang[
+))}),i.bindSettingRadio()},ok:function(){var t=i.fetchVideoCfg();return!!i.verifyVideoCfg(t)&&(t.video_record_time=parseInt(e(
+).val()),i.saveVideoCfg(t),!0)}})},bindSettingRadio:function(){e(
+,n.setRequestHeader(
+));var a=this;n.onload=function(t){if(4===n.readyState)if(200===n.status){if(e(
+),window._video=a.video,a.video.playing=!0,a.video.findFrameSpeed(a.stream),a.video.parseRecordedFrameHeader(a.stream),
+subSection auto_download
+><%=lang.uDisk.autoDownloadSDS%></div>\r\n                    <div class=
+downloadSDS
+.auto_download
+)?1:0,sds_autodownload_enable:e(
+)+i}function g(e,t){var n={milliseconds:0,months:0};return n.months=t.month()-e.month()+12*(t.year()-e.year()),e.clone().add(n.months,
+).isAfter(t)&&--n.months,n.milliseconds=+t-+e.clone().add(n.months,
+,c];return u[2]=t,u[3]=+e>0,u[4]=n,ie.apply({},u)}function re(e,t,n){var i,a=n-t,r=n-e.day();return r>a&&(r-=7),a-7>r&&(r+=7),i=ve(e).add(r,
+moment.lang is deprecated. Use moment.locale instead.
+moment.langData is deprecated. Use moment.localeData instead.
+)),this},format:function(e){var t=B(this,e||ve.defaultFormat);return this.localeData().postformat(t)},add:v(1,
+===e&&this.month(3*Math.floor(this.month()/3)),this},endOf:function(e){return e=S(e),this.startOf(e).add(1,
+moment().min is deprecated, use moment.min instead. https://github.com/moment/moment/issues/1548
+moment().max is deprecated, use moment.max instead. https://github.com/moment/moment/issues/1548
+))/864e5)+1;return null==e?t:this.add(e-t,
+)},isoWeekYear:function(e){var t=re(this,1,4).year;return null==e?t:this.add(e-t,
+)},week:function(e){var t=this.localeData().week(this);return null==e?t:this.add(7*(e-t),
+)},isoWeek:function(e){var t=re(this,1,4).week;return null==e?t:this.add(7*(e-t),
+)},weekday:function(e){var t=(this.day()+7-this.localeData()._week.dow)%7;return null==e?t:this.add(e-t,
+moment().lang() is deprecated. Use moment().localeData() instead.
+dates accessor is deprecated. Use date instead.
+years accessor is deprecated. Use year instead.
+toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)
+>\r\n            <thead>\r\n                <tr>\r\n                    <th style=
+><%=lang.eventLog.recommendedAction%></th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n            </tbody>\r\n        </table>\r\n    </div>\r\n</div>
+downloadPart
+><%=lang.sdsLog.downloadLog%></label> -->\r\n    <div id=
+ readonly=
+padding: 10px 0 0 87px;
+],weekHeader:
+)&&e(this).addClass(
+).addClass(this._triggerClass).attr({src:r,alt:a,title:a}):e(
+).addClass(this._triggerClass).html(r?e(
+,this._formatDate(e,r).length)}},_inlineDatepicker:function(t,n){var i=e(t);i.hasClass(this.markerClassName)||(i.addClass(this.markerClassName).append(n.dpDiv),e.data(t,
+))},_dialogDatepicker:function(t,n,i,a,l){var s,o,c,u,d,p=this._dialogInst;return p||(this.uuid+=1,s=
++this.uuid,this._dialogInput=e(
+),this._dialogInput.keydown(this._doKeyDown),e(
+).append(this._dialogInput),p=this._dialogInst=this._newInst(this._dialogInput,!1),p.settings={},e.data(this._dialogInput[0],
+),p.settings.onSelect=i,this._inDialog=!0,this.dpDiv.addClass(this._dialogClass),this._showDatepicker(this._dialogInput[0]),e.blockUI&&e.blockUI(this.dpDiv),e.data(this._dialogInput[0],
++this._inlineClass),i.children().addClass(
+);break;case 34:e.datepicker._adjustDate(t.target,t.ctrlKey?+e.datepicker._get(r,
+),l=t.ctrlKey||t.metaKey,t.originalEvent.altKey&&e.datepicker._adjustDate(t.target,t.ctrlKey?-e.datepicker._get(r,
+);break;case 38:(t.ctrlKey||t.metaKey)&&e.datepicker._adjustDate(t.target,-7,
+),l=t.ctrlKey||t.metaKey;break;case 39:(t.ctrlKey||t.metaKey)&&e.datepicker._adjustDate(t.target,s?-1:1,
+),l=t.ctrlKey||t.metaKey,t.originalEvent.altKey&&e.datepicker._adjustDate(t.target,t.ctrlKey?+e.datepicker._get(r,
+);break;case 40:(t.ctrlKey||t.metaKey)&&e.datepicker._adjustDate(t.target,7,
+),r>1&&t.dpDiv.addClass(
+,l]),this._lastInput=null,this._inDialog&&(this._dialogInput.css({position:
+===e.input.val()?null:this._daylightSavingAdjust(new Date(e.currentYear,e.currentMonth,e.currentDay));return t},_attachHandlers:function(t){var n=this._get(t,
+).map(function(){var t={prev:function(){e.datepicker._adjustDate(i,-n,
+)},next:function(){e.datepicker._adjustDate(i,+n,
+),Y=1!==G[0]||1!==G[1],X=this._daylightSavingAdjust(e.currentDay?new Date(e.currentYear,e.currentMonth,e.currentDay):new Date(9999,9,9)),J=this._getMinMaxDate(e,
+),n=$?this.formatDate(n,this._daylightSavingAdjust(new Date(ee,Z-q,1)),this._getFormatConfig(e)):n,i=this._canAdjustMonth(e,-1,ee,Z)?
+),a=$?this.formatDate(a,this._daylightSavingAdjust(new Date(ee,Z+q,1)),this._getFormatConfig(e)):a,r=this._canAdjustMonth(e,1,ee,Z)?
+,this.maxRows=4,k=0;k<G[1];k++){if(C=this._daylightSavingAdjust(new Date(ee,Z,e.selectedDay)),T=
+ui-datepicker-header ui-widget-header ui-helper-clearfix
+)+this._generateMonthYearHeader(e,Z,ee,J,K,S>0||k>0,f,g)+
+><thead><tr>
+weekHeader
+</tr></thead><tbody>
+,
+j.setDate(j.getDate()+1),j=this._daylightSavingAdjust(j);D+=R+
+),x+=D}y+=x}return y+=c,e._keyEvent=!1,y},_generateMonthYearHeader:function(e,t,n,i,a,r,l,s){var o,c,u,d,p,h,f,g,m=this._get(e,
+},_adjustInstDate:function(e,t,n){var i=e.drawYear+(
+===n?t:0),l=this._restrictMinMax(e,this._daylightSavingAdjust(new Date(i,a,r)));e.selectedDay=l.getDate(),e.drawMonth=e.selectedMonth=l.getMonth(),e.drawYear=e.selectedYear=l.getFullYear(),(
+==typeof t?t:this._daylightSavingAdjust(new Date(i,n,t)):this._daylightSavingAdjust(new Date(e.currentYear,e.currentMonth,e.currentDay));return this.formatDate(this._get(e,
+,title:r.lang.eventLog.recommendedAction1,content:a,cancel:!0,ok:!1,width:850,padding:0,lock:!0,opacity:.2,fixed:!1,cancelVal:r.lang[
+].datePicker.dayNamesMin,weekHeader:r.lang[
+].datePicker.weekHeader,dateFormat:
++l});art.dialog({title:r.lang.eventLog.customize,content:u,cancel:!1,width:460,padding:0,lock:!0,opacity:.2,fixed:!1,okVal:r.lang[
+}),document.body.appendChild(a),a.click()},error:function(e,t,n){art.dialog.msg(r.lang.eventLog.downloadCSVFailed,
+logIPAdrr
+].processing,sLoadingRecords:
+>\r\n                <%=lang.sdsLog.downloadLogTitle%>\r\n                <button id=
+downloadAllSec
+downloadAll
+><%=lang.sdsLog.downloadAllLog%></label>\r\n                        </div>\r\n                        <p class=
+downloadAllNotic
+downloadPartSec
+><%=lang.sdsLog.downloadLog%></label>\r\n                        <p class=
+downloadPartNotic
+>\r\n                <%=lang.sdsLog.addcontacts%>\r\n            </div>\r\n            <div class=
+downLoadAllLog
+#downLoadAllLog
+#downloadAll
+);t.checkData()&&(i?t.downLoadLog(e(
+).val()):t.downLoadAllLog())}),e(
+#downloadAllSec
+#downloadPartSec
+#downloadPart
+},e.datepicker.setDefaults(e.datepicker.regional[r.langtype])},downLoadLog:function(e,t){var n=this;
+].closeBtn):e.match(/^\d{4}-\d{2}-\d{2}$/)&&t.match(/^\d{4}-\d{2}-\d{2}$/)&&t>=e?art.dialog.confirm(r.lang.sdsLog.downloadTimeNotice,r.lang[
+].cancelBtn,function(){n.sendDownLoadLog(e,t)}):art.dialog.warn(r.lang.sdsLog.timeError,r.lang[
+].closeBtn)},downLoadAllLog:function(){var e=this;art.dialog.confirm(r.lang.sdsLog.downloadTimeNotice,r.lang[
+].cancelBtn,function(){e.sendDownLoadLog(
+)})},sendDownLoadLog:function(t,n){art.dialog.showWait(r.lang[
+).slideUp(),t.disableButtons(!1)},2e3),t.downloadFile(t.filename)},error:function(e,t,n){art.dialog.msg(r.lang.sdsLog.getSdsStatusError,
+)},downloadFile:function(t){var n=t,i=document.createElement(
+raphael.DOMload
+:400,gradient:0,height:0,href:
+<v:shape adj=
+!=typeof be.adj)return n.type=L;_e=null}n.svg=!(n.vml=
+)},n._preload=function(e,t){var n=T.doc.createElement(
+})},w.add=function(e){if(n.is(e,
+},!1),e.readyState=
+DOMContentLoaded
+,u=e.id+a,p=.5,h=.5,f=e.node,g=e.paper,v=f.style,b=n._g.doc.getElementById(u);if(!b){if(a=t(a).replace(n._radial_gradient,function(e,t,n){if(c=
+),e.gradient&&u!=e.gradient.id&&(g.defs.removeChild(e.gradient),delete e.gradient),!e.gradient){b=m(c+
+,{id:u}),e.gradient=b,m(b,
+==c?{fx:p,fy:h}:{x1:y[0],y1:y[1],x2:y[2],y2:y[3],gradientTransform:e.matrix.invert()}),g.defs.appendChild(b);for(var x=0,k=S.length;k>x;x++)b.appendChild(m(
+]:1)})}}u.gradient=g,u.fill=
+;break}}else delete r.gradient,delete u.gradient,!n.is(u.opacity,
+gradient
+:u.gradient&&!u[e](
+:if(u.gradient){j=n._g.doc.getElementById(o.getAttribute(
++this.id),this.gradient&&t.defs.removeChild(this.gradient),n._tear(this,t),e.parentNode.removeChild(e),this.removeData();for(var i in this)this[i]=
+)}return e&&this.hide(),i},D.attr=function(t,i){if(this.removed)return this;if(null==t){var a={};for(var r in this.attrs)this.attrs[e](r)&&(a[r]=this.attrs[r]);return a.gradient&&
+==a.fill&&(a.fill=a.gradient)&&delete a.gradient,a.transform=this._.transform,a}if(null==i&&n.is(t,
+==this.attrs.fill&&this.attrs.gradient)return this.attrs.gradient;if(
+;var U=a.getBBox(1);R.position=U.x+h+U.y,a._.fillpos=[U.x,U.y],n._preload(B[1],function(){a._.fillsize=[this.offsetWidth,this.offsetHeight]})}else R.color=n.getRGB(o.fill).hex,R.src=f,R.type=
+,p.gradient=o.fill,R.rotate=!1)}if(
+;if(e.attrs.gradient=r,r=t(r).replace(n._radial_gradient,function(e,t,n){return o=
+gradientTitle
+==this.attrs.fill&&this.attrs.gradient)return this.attrs.gradient;for(var l=t.split(u),s={},o=0,p=l.length;p>o;o++)t=l[o],s[t]=t in this.attrs?this.attrs[t]:n.is(this.paper.customAttributes[t],
+.Blur(pixelradius=
+)}),this};var P;n._engine.initWin=function(e){var t=e.document;t.styleSheets.length<31?t.createStyleSheet().addRule(
+):t.styleSheets[0].addRule(
+);try{!t.namespaces.rvml&&t.namespaces.add(
+position:absolute;left:-9999em;top:-9999em;padding:0;margin:0;line-height:1;
+position:absolute;left:-9999em;top:-9999em;padding:0;margin:0;line-height:1;display:inline;
+bad rs block @ typeNumber:
+==t.render){n=new i(t.typeNumber,t.correctLevel),n.addData(t.text),n.make();var a=document.createElement(
+,function(t){$(this).addClass(
+).click(),$(this).addClass(
+).addClass(l+
++(parseInt(t)+1e3)).slice(-4)},_addZero:function(e,t){for(var n=
++l.lang.ocean.reading+
+}return d},_readingToString:function(e,t,n){return 213===e?
+>\r\n                        <%=lang.fan.adjust_mode%>\r\n                    </div>\r\n                    <div class=
+padding-top:0;
+adj_title
+adjdisplay
+fan_adjust
+,orderable:!1,createdCell:function(e,t){a.fanType&&(Math.floor(h/p/a.fanType)%2===0?$(e).parent().addClass(
+):$(e).parent().addClass(
+,title:r.lang.fan.path,content:a,cancel:!0,padding:0,width:1e3,lock:!0,cancelVal:r.lang[
+#adjdisplay
+].wait);var t=new d;t.fetch({success:function(t,n,i){art.dialog.clearWait(),e.showVnc(n)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.kvmControl.getRSession,
+,title:r.lang.kvmControl.selectMode,content:l,cancel:!0,padding:0,width:600,lock:!0,cancelVal:r.lang[
+)){var c=sessionStorage.getItem(
+/api/kvm/token
+==typeof d.download?window.location=u:($(d).attr(
+}),document.body.appendChild(d),d.click())},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.kvmControl.jnlpLoadFail,
+</argument><argument>-kvmtoken</argument><argument>
+</argument><argument>-keyboardlayout</argument><argument>AD</argument><argument>-localization</argument><argument>
++n.session+
+,uploadRestoreProcessTimer:
+.backup_restore .btn-upload
+_download_config
+).html(i.lang.backupRestore.notStarted),15===e.cc?art.dialog.msg(i.lang.backupRestore.exportAlready,
+==typeof c.download?window.location=o:($(c).attr(
+_upload_restore
+,cache:!1,timeout:5e3,success:function(e,t,r){0===e.cc?a.uploadRestoreProcesses(n):1===e.cc?(art.dialog.clearWait(),art.dialog.msg(i.lang.backupRestore.uploadAlready,
+)):(art.dialog.clearWait(),art.dialog.msg(i.lang.backupRestore.uploadFileFail,
+_upload_restore error
+===t?a.uploadRestoreProcesses(n):(art.dialog.clearWait(),403===e.status?art.dialog.msg(i.lang[
+):art.dialog.msg(i.lang.backupRestore.uploadFileFail,
+)[0].reset()}})},uploadRestoreProcesses:function(t){var n=this;$(
+).html(i.lang.backupRestore.importing),n.uploadRestoreProcessTimer&&(clearTimeout(n.uploadRestoreProcessTimer),n.uploadRestoreProcessTimer=null),e.ajax({url:
+),n.uploadRestoreProcessTimer=setTimeout(function(){n.uploadRestoreProcesses(t)},2e3));else{switch(a.cc){case 1:art.dialog.warn(i.lang.backupRestore.uploadFileNotMatch,i.lang[
+].closeBtn);break;case 2:art.dialog.warn(i.lang.backupRestore.uploadNotMatchVersion,i.lang[
+].closeBtn);break;case 4:art.dialog.warn(i.lang.backupRestore.uploadNotMatchHDMVersion,i.lang[
+);break;default:art.dialog.msg(i.lang.backupRestore.uploadFileFail,
+)}n.resetImportState()}},error:function(e,t,a){n.resetImportState(),art.dialog.msg(i.lang.backupRestore.uploadFileFail,
+><%=lang.service.serviceMaxSessions%></div>\r\n                    <div class=
+serviceMaxSessions
+><%=lang.service.activeSession%></div>\r\n                    <div class=
+activeSession
+text!js/templates/config/service/service_sessions.html
+service-session-box\
+session-box\
+/api/settings/service-sessions
+,function(){t.fetchServiceSession(e(this).data(
+readonly
+,title:a.lang.service.modifyService,content:r,cancel:!0,width:600,padding:0,lock:!0,cancelVal:a.lang[
+).val(),time_out:t,maximum_sessions:e(
+).val(),active_session:e(
+);break;case 213:art.dialog.msg(a.lang.service.existenceSession,
+)}})},fetchServiceSession:function(e,i){var r=this;art.dialog.clearWait(),art.dialog.showWait(a.lang[
+/api/settings/service-sessions/?service_id=
+)}})},showServiceSession:function(e){var n=this,i=t.template(d,{lang:a.lang,json:e,signUser:n._signUser});art.dialog({id:
+,title:a.lang.service.serviceSession,content:i,cancel:!0,width:780,lock:!0,padding:
+].sureBtn,init:function(){n.bindServiceSessionBtn(),n._showServiceSession=this,this._reset()},ok:!1})},_signUser:function(e,t){return 1===t?e+
+:e},bindServiceSessionBtn:function(){var t=this;e(
+#session-box .table-delete
+);n===parseInt(window.sessionStorage.getItem(
+))?art.dialog.confirm(a.lang.service.activeSessionSure+
+),n.refeshServiceSession()):209===i.cc?(art.dialog.clearWait(),art.dialog.msg(a.lang[
+),n.refeshServiceSession()):(art.dialog.clearWait(),art.dialog.msg(a.lang.service.deleteServersSessionFail,
+))},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(a.lang.service.deleteServersSessionFail,
+)}})},refeshServiceSession:function(){this.fetchServiceSession(this.service_id,!0)},validateAllData:function(t){var n=parseInt(e.cookie(
+).show();var o=255===n.maximum_sessions||255===n.maximum_sessions?
+:127&n.maximum_sessions;e(
+#serviceMaxSessions
+).show();var c=255===n.active_session||255===n.active_session?
+:127&n.active_session;e(
+#activeSession
+,title:a.lang.powerConfig.powerSetting,content:r,cancel:!0,width:750,padding:0,lock:!0,cancelVal:a.lang[
+,title:a.lang.powerConfig.restore,content:i,cancel:!0,width:650,padding:0,lock:!0,cancelVal:a.lang[
+padding-top:10px;display:flex;align-items:center
+padding-top:10px;
+].datePicker.dayNamesMin,weekHeader:a.lang[
+,title:a.lang.powerConfig.meter,content:n,cancel:!0,width:600,padding:0,lock:!0,cancelVal:a.lang[
+,title:a.lang.powerConfig.boardMeter,content:i,cancel:!0,width:600,padding:0,lock:!0,cancelVal:a.lang[
+,title:a.lang.powerConfig.gpuMeter,content:i,cancel:!0,width:600,padding:0,lock:!0,cancelVal:a.lang[
+,function(){t.getAll--,t.total=1,e(this).addClass(
+,function(){e(this).addClass(
+advancedSetting
+><%= lang.powerConfig.advancedSetting %></button>\r\n                <%}%>\r\n            </div>\r\n            <div class=
+Time_adjust
+adJdisplay
+efficiency_adjust
+cpu_adjust
+#advancedSetting
+#cpu_adjust
+,title:r.lang.powerConfig.advancedSetting,content:l,cancel:!0,width:750,padding:0,lock:!0,cancelVal:r.lang[
+#adJdisplay
+<%}%>><%=lang.userAccess.domainUsers%></li>\r\n        <li <%if(isUIS){%>class=
+domainUsers
+><%= lang.users.advancedSetting %></button>\r\n            </div>\r\n    <div class=
+><%=lang.users.delete%></button>\r\n                    <%}else if(e.id === adminUserID && !isAliCloud){%>\r\n                        <button class=
+addUser
+icon-table-add
+>\r\n        <thead>\r\n            <tr>\r\n                <th>\r\n                    <%= lang.users.rolePermissions %>\r\n                    <button id=
+>\r\n                        <%if(e.role_name!== 
+ && e.role_name !== 
+custom_role_name
+role_input h3c-input-ss hide
+ value=<%= e.role_name%>>\r\n                            <em class=
+ <%if(e.basic_config){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                    <td><input type=
+ <%if(e.safe_config){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                    <td><input type=
+ <%if(e.remote_control){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                    <td><input type=
+ <%if(e.remote_media){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                    <td><input type=
+ <%if(e.power_contorl){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                    <td><input type=
+ <%if(e.server_health_and_maintenance){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                    <td><input type=
+ <%if(e.selfconf_privilege){%>checked<%}%> <%if(disabledPermissionInput(e.role_name)){%>disabled<%}%>></td>\r\n                </tr>\r\n            <%})%>\r\n        </tbody>\r\n    </table>\r\n</div>
+ <%if(json.access===1){%> checked<%}%>\r\n                        <%if(isAdminUser && !isAliCloud){%> disabled <%}%>>\r\n                        <label class=
+\r\n                                <%if(isAdminUser && !isAliCloud){%> disabled <%}%>>\r\n                                <option value=
+>Administrator</option>\r\n                                <option value=
+\r\n                                <%if(isAdminUser && !isAliCloud){%> disabled <%}%>>\r\n                        <label class=
+\r\n                        <%if(isAdminUser && !isAliCloud){%> disabled <%}%>>\r\n                        <label class=
+snmpReadWriteSec
+>\r\n                            <span><%=lang.users.snmpV3ReadWritePriv%></span>\r\n                        </div>\r\n                        <div class=
+snmpV3Read
+snmpV3ReadWrite
+read_only
+read_write
+>\r\n                        <span><%=lang.users.uploadSSHKey%></span>\r\n                    </div>\r\n                    <div class=
+btn btn-file-upload
+text!js/templates/config/users/user_add.html
+user-add-dialog
+role_id
+roleId
+administrator
+>\r\n                        <span><%=lang.users.snmpV3ReadWritePriv%></span>\r\n                    </div>\r\n                    <div class=
+sshAddName
+ssh-add-file
+sshAddKey
+/api/settings/user/ssh-key-upload
+,customRoleName:[],showCloseTip:!0,initialize:function(){this.fetchAllUserInterface()},fetchAllUserInterface:function(){var e=this;art.dialog.showWait(a.lang[
+!==e.name.trim()}),l=t.template(p,{lang:a.lang,json:e,isUserAccess:a.isUserAccess()});this.$el.html(l),customRoleName=[];for(var s=0;s<n.role_groups.length;s++)
+!==n.role_groups[s].role_name&&
+!==n.role_groups[s].role_name&&customRoleName.push(n.role_groups[s].role_name);if(1==jQuery.cookie(
+#addUser,#saveUserPrivilege
+#modifyRoleName
+Administrator
+#addUser
+,function(n){t.addUser(e)}),jQuery(
+.role_input
+.custom_role_name
+,title:a.lang.users.pwRuleDialogTitle,content:i,cancel:!0,width:550,padding:0,lock:!0,cancelVal:a.lang[
+).val(e.login_fail_number),jQuery(
+).val(e.login_fail_time),jQuery(
+).val(),login_fail_number:jQuery(
+).val(),login_fail_time:jQuery(
+)}})},showUpdateUSer:function(n){var i=this,r=t.template(g,{lang:a.lang,json:n,isAdminUser:parseInt(jQuery.cookie(
+))===parseInt(n.id),isAliCloud:a.isAliCloud(),customRoleName:customRoleName});art.dialog({id:
+,title:a.lang.users.modifyUser,content:r,cancel:!0,width:660,padding:0,lock:!0,cancelVal:a.lang[
+#SSHForm .btn-file-upload
+#snmpReadWriteSec,#authProtocalSec,#privProtocalSec
+#snmpV3Read
+)),e.password=linebrk(hex2b64(a.encrypt(e.password))),e.RSAEncryptFlag=1,jQuery.when(i.uploadKey(e.id,
+)),e.password=linebrk(hex2b64(l.encrypt(e.password))),e.RSAEncryptFlag=1,jQuery.when(i.uploadKey(e.id,
+,title:a.lang.users.addUser,content:r,cancel:!0,width:660,padding:0,lock:!0,cancelVal:a.lang[
+#sshAddKey
+#sshAddName
+#roleId
+)),e.password=linebrk(hex2b64(n.encrypt(e.password))),e.RSAEncryptFlag=1,jQuery.when(i.uploadKey(e.id,
+)?1:0,jQuery.when(i.sendUpdateUser(e,t)).done(function(e){e&&art.dialog.list.showAddUSer.close()})):art.dialog.clearWait()}),!1}return!1}})},uploadKey:function(t,n){var i=
+upload_ssh_key
+/api/settings/user/ssh-key-upload/
+,cache:!1,success:function(e,t,n){0===e.cc?(r.resolve(!0),art.dialog.msg(a.lang.users.uploadNewSSLSuccess)):1===e.cc?(art.dialog.msg(a.lang.users.illegalSSHFileSize,
+),r.resolve(!1)):(art.dialog.msg(a.lang.users.uploadNewSSLFailed,
+),r.resolve(!1))},error:function(e,t,n){art.dialog.msg(a.lang.users.uploadNewSSLFailed,
+).html(a.lang.users.invalidEmailAddress),!1))},sendUpdateUser:function(e,t){a.isAliCloud()&&(e.email_id=
+)):(art.dialog.clearWait(),i=!1,0===t?art.dialog.msg(a.lang.users.addFail,
+)),n.resolve(i)},error:function(e,r,l){art.dialog.clearWait(),i=!1,0===t?art.dialog.msg(a.lang.users.addFail,
+.role_name
+).each(function(e){t.push({role_name:jQuery(
+.role_name .custom_role_name
+.role_name .role_input
+)?1:0}),t[e].role_name.match(/^.*[^0-9A-Za-z\_\-\.\@]+.*$/)||0===t[e].role_name.length?(jQuery(this).find(
+.role_name .icons-err
+===t[e].role_name||
+===t[e].role_name?(jQuery(this).find(
+,a.lang.users.invalidCustomName2),i=!0):-1!==n.indexOf(t[e].role_name)&&(jQuery(this).find(
+,a.lang.users.invalidCustomName3),i=!0),n.push(t[e].role_name)}),!i){var r=new T;r.save({role_groups:t},{type:
+text!js/templates/config/users/domain_users.html
+domain-ldap
+domain-ad
+text!js/templates/config/ldapConfig/ldap_config.html
+></em><span><%= lang.ldapConfig.maxRoleNum1 %><%=allLdapUsers.length%><%= lang.ldapConfig.maxRoleNum2 %></span>\r\n</div>\r\n<div class=
+>\r\n                <%=lang.userAccess.ldap%>\r\n                <button class=
+ldapSettingBtn
+ldap-config-box
+ldapConfigDatabase
+><%= lang.ldapConfig.modifyBtn %></button>\r\n                                    <button class=
+addLDAPUser
+ <%if(isDisableAddLdapUserBtn || !hide){%>disabled=
+text!js/templates/config/ldapConfig/ldap_user_edit.html
+ldap-users-edit-box
+>\r\n            \t<%if(addLdapRole){%>\r\n            \t<div class=
+><%= lang.ldapConfig.roleGroupID %></div>\r\n\t\t\t\t\t<div class=
+><%=lang.ldapConfig.roleGroupName%></div>\r\n\t\t\t\t\t<div class=
+roleGroupName
+roleGroupNameError
+><%=lang.ldapConfig.roleGroupDomain%></div>\r\n\t\t\t\t\t<div class=
+roleGroupDomain
+roleGroupDomainError
+><%=lang.ldapConfig.roleGroupPermission%></div>\r\n\t\t\t\t\t<div class=
+roleGroupPermission
+><%=lang.ldapConfig.administrator%></option>\r\n\t\t\t\t\t\t\t<option value=
+><%=lang.ldapConfig.operator%></option>\r\n\t\t\t\t\t\t\t<option value=
+text!js/templates/config/ldapConfig/ldap_setting_edit.html
+ldap-setting-edit-box
+><%=lang.ldapConfig.ldapCert%></div>\r\n\t\t\t\t\t<div class=
+ldapCert
+ldapCertEnabled
+ldapCertDisabled
+><%=lang.ldapConfig.encryptionType%></div>\r\n\t\t\t\t\t<div class=
+ <%if(json.encryption_type===0){%>selected<%}%>><%=lang.ldapConfig.noEncryption%></option>\r\n\t\t\t\t\t\t\t<option value=
+ <%if(json.encryption_type===1){%>selected<%}%>><%=lang.ldapConfig.ssl%></option>\r\n\t\t\t\t\t\t</select>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=
+><%=lang.ldapConfig.commonNameType%></div>\r\n\t\t\t\t\t<div class=
+><%=lang.ldapConfig.serverAddress%></div>\r\n\t\t\t\t\t<div class=
+<%=json.server_address%>
+serverAddressError
+><%=lang.ldapConfig.port%></div>\r\n\t\t\t\t\t<div class=
+><%=lang.ldapConfig.bindDN%></div>\r\n\t\t\t\t\t<div class=
+><%=lang.ldapConfig.password%></div>\r\n\t\t\t\t\t<div class=
+><%=lang.ldapConfig.userDN%></div>\r\n\t\t\t\t\t<div class=
+editRoleGroupDomain
+editRoleGroupDomainError
+><%=lang.ldapConfig.userLoginAttr%></div>\r\n\t\t\t\t\t<div class=
+userLoginAttr
+ <%if(json.user_login_attribute===\
+text!js/templates/config/ad/ad_list.html
+>\r\n                <%=lang.userAccess.ad%>\r\n                <button class=
+adSettingBtn
+adConfigBox
+adConfigDatabase
+><%=lang.ldapConfig.modifyBtn %></button>\r\n                                            <button class=
+addADUser
+text!js/templates/config/ad/ad_setting.html
+adSetting
+><%=lang.adConfig.adCert%></div>\r\n\t\t\t\t\t<div class=
+adCert
+adCertEnabled
+adCertDisabled
+><%=lang.adConfig.sercetUsername%></div>\r\n\t\t\t\t\t<div class=
+><%=lang.adConfig.invalidSercetUsername%></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=
+><%=lang.adConfig.sercetPassword%></div>\r\n\t\t\t\t\t<div class=
+><%=lang.adConfig.invalidSercetPassword%></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=
+><%=lang.adConfig.userDomainName%></div>\r\n\t\t\t\t\t<div class=
+userDomainName
+ value=<%=json.user_domain_name%>>\r\n\t\t\t\t\t\t<span class=
+userDomainNameError
+><%=lang.adConfig.domainCtrlServerAddress%>1</div>\r\n\t\t\t\t\t<div class=
+domainCtrlServerAddress1
+ value=<%=json.domain_controller1%>>\r\n\t\t\t\t\t\t<span class=
+domainCtrlServerAddress1Error
+><%=lang.adConfig.domainCtrlServerAddress%>2</div>\r\n\t\t\t\t\t<div class=
+domainCtrlServerAddress2
+ value=<%=json.domain_controller2%>>\r\n\t\t\t\t\t\t<span class=
+domainCtrlServerAddress2Error
+><%=lang.adConfig.domainCtrlServerAddress%>3</div>\r\n\t\t\t\t\t<div class=
+domainCtrlServerAddress3
+ value=<%=json.domain_controller3%>>\r\n\t\t\t\t\t\t<span class=
+domainCtrlServerAddress3Error
+text!js/templates/config/ad/ad_group_edit.html
+adGroupEdit
+>\r\n\t\t\t\t<%if(addADRole){%>\r\n\t                <div class=
+><%= lang.ldapConfig.roleGroupID %></div>\r\n\t                    <div class=
+ || jQuery.trim(e.role_group_name) === 
+><%=lang.adConfig.groupName%></div>\r\n\t\t\t\t\t<div class=
+ value=<%=json.role_group_name%>>\r\n\t\t\t\t\t\t<span class=
+><%=lang.adConfig.invalidGroupName%></span>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=
+><%=lang.adConfig.groupDomain%></div>\r\n\t\t\t\t\t<div class=
+groupDomain
+ value=<%=json.role_group_domain%>>\r\n\t\t\t\t\t\t<span class=
+groupDomainError
+><%=lang.adConfig.groupPrivilege%></div>\r\n\t\t\t\t\t<div class=
+ <%if(json.role_group_privilege === 
+){%>selected<%}%>><%=lang.ldapConfig.operator%></option>\r\n\t\t\t\t\t\t\t<option value=
+js/views/domainUsersView
+/api/settings/ldap-settings
+/api/settings/ldap-users
+#domainUsers
+].wait);var t=new S;t.fetch({success:function(t,n,i){customRoleName=[];for(var a=0;a<n.role_groups.length;a++)
+!==n.role_groups[a].role_name&&
+)}})},setLDAPSettings:function(t){var n=this;if(art.dialog.clearWait(),art.dialog.showWait(r.lang[
+)}})},fetchLDAPUsers:function(){var e=this;art.dialog.clearWait(),art.dialog.showWait(r.lang[
+].wait);var t=new b;t.fetch({success:function(t,n,i){art.dialog.clearWait(),e.showLDAPUsers(n)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.ldapConfig.fetchLDAPUsersFail,
+)}})},fetchLDAPUsersById:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(r.lang[
+)}})},addLDAPUsers:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(r.lang[
+)}})},setLDAPUsers:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(r.lang[
+)}})},deleteLDAPUsers:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(r.lang[
+)}})},showLDAPUsers:function(n){var i=this,a=n.filter(function(e){return void 0!==e.role_group_name&&
+#ldapConfigDatabase
+#addLDAPUser,.table-update,.table-delete
+,!0)},convertStrToText:function(e,t){return r.lang.ldapConfig.ldapRolePrivilege[e]?r.lang.ldapConfig.ldapRolePrivilege[e]:t[e-6]},bindAllBtn:function(t){var n=this;e(
+,function(){n.fetchLDAPSettings()}),e(
+,function(){n.showAddLDAPUsers(t)}),e(
+,function(){n.fetchLDAPUsersById(parseInt(e(this).data(
+.table-delete.deleteLDAPGroup
+));art.dialog.confirm(r.lang.ldapConfig.confirmDeleteLDAPGroup,r.lang[
+].artCancel,function(){n.deleteLDAPUsers(t)})})},showEditLDAPSetting:function(n){var i=this,a=t.template(p,{lang:r.lang,json:n});i.showEditLDAPSettingDialog=art.dialog({id:
+,title:r.lang.ldapConfig.roleGroupSetting,content:a,cancel:!0,width:600,padding:0,lock:!0,okVal:r.lang[
+#ldap-setting-edit-box
+,title:r.lang.ldapConfig.addLDAPUsers,content:a,cancel:!0,width:600,padding:
+).selectpicker({})},ok:function(){var t=i.getEditLDAPUsers();return delete t.id,t.role_id=parseInt(e(
+).val()),!!i.validateEditLDAPUsers(t)&&(i.addLDAPUsers(t),!0)}})},showEditLDAPUsers:function(e){var n=this,i=t.template(d,{lang:r.lang,addLdapRole:!1,customRoleName:customRoleName});art.dialog({id:
+,title:r.lang.ldapConfig.modifyLDAPUsers,content:i,cancel:!0,width:650,padding:
+].sureBtn,init:function(){n.displayEditLDAPUsers(e)},ok:function(){var e=n.getEditLDAPUsers();return!!n.validateEditLDAPUsers(e)&&(n.setLDAPUsers(e),!0)}})},validateEditLDAPSettings:function(t){if(e(
+===t.common_name_type){if(!IP.checkAll(t.server_address)&&!checkIPV6(t.server_address,!1,!1))return e(
+).html(r.lang.ldapConfig.invalidServerAddress),!1}else if(!checkDomain(t.server_address))return e(
+).html(r.lang.ldapConfig.invalidServerAddress),!1;return isPort(t.port)?this.validRroleGroupDomain(t.bind_dn,
+)?!!this.validRroleGroupDomain(t.search_base,
+#editRoleGroupDomain
+).html(r.lang.ldapConfig.invalidUserDN),!1):(e(
+).html(r.lang.ldapConfig.invalidBindDN),!1):(e(
+).html(r.lang.ldapConfig.invalidPort),!1)},validateEditLDAPUsers:function(t){return e(
+),this.validDomainname(t.role_group_name)?!!this.validRroleGroupDomain(t.role_group_domain,
+#roleGroupDomain
+).html(r.lang.ldapConfig.invalidRroleGroupDomain),!1):(e(
+).html(r.lang.ldapConfig.invalidRroleGroupName),!1)},getEditLDAPUsers:function(){var t={role_group_name:e(
+).val(),role_group_domain:e(
+).val(),role_group_privilege:e(
+).val()};return e.extend(!0,{},k,t)},getEditLDAPSettings:function(){var t={enable:e(
+#userLoginAttr
+===t.enable&&(t=x,t.enable=0,delete t.id,delete t.cc),t},displayEditLDAPUsers:function(t){e(
+).val(t.role_group_name),e(
+).val(t.role_group_domain),e(
+).val(t.role_group_privilege),e(
+).selectpicker({})},validRroleGroupDomain:function(e,t){var n=
+),0===n.length&&l++}return t.length!=l},getAdGroup:function(){var e=this;art.dialog.showWait(r.lang[
+].wait);var t=new w;t.clear(),t.fetch({success:function(t,n,i){art.dialog.clearWait(),e.showContent(n)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.adConfig.getAdUserError,
+)}})},showContent:function(n){var i=this,a=n.filter(function(t){return void 0!==t.role_group_name&&
+!==t.role_group_name&&
+!==e.trim(t.role_group_name)}),l=t.template(h,{lang:r.lang,allADUsers:n,json:a,adEnable:i.adEnable,isDisableAddADUserBtn:a.length===n.length,convertADStrToText:i.convertADStrToText});e(
+#adConfigDatabase
+#addADUser, .modifyAdGroup, .deleteAdGroup
+#adSettingBtn
+,function(){i.getAdSetting()})},convertADStrToText:function(e){return e=e.replace(/[ ]/g,
+#addADUser
+,function(){n.showAddAdGroupEdit(t)}),e(
+);n.getEditAdUser(t)}),e(
+,function(){var t=this;art.dialog.confirm(r.lang.adConfig.confirmDeleteAdGroup,r.lang[
+);n.deleteAdGroup(i)})})},getAdSetting:function(e){var t=this;art.dialog.showWait(r.lang[
+)}})},showAdSetting:function(n){var i=this,a=t.template(f,{lang:r.lang,json:n});i.showEditADSettingDialog=art.dialog({id:
+,title:r.lang.adConfig.roleGroupSetting,content:a,cancel:!0,width:
+)?800:600,padding:0,lock:!0,okVal:r.lang[
+#adSetting input[name=
+#adSetting input[type=
+], #adSetting input[type=
+#adSetting
+).val(),user_domain_name:e(
+).val(),domain_controller1:e(
+).val(),domain_controller2:e(
+).val(),domain_controller3:e(
+).val()};return!!i.validAdSetting(t)&&(1===t.enable&&0===t.secret_password.length?(art.dialog.confirm(r.lang.ldapConfig.notModifyPassword,r.lang[
+].artCancel,function(){return i.saveAdSetting(t),i.showEditADSettingDialog.close(),!0}),!1):(i.saveAdSetting(t),!0))}})},validAdSetting:function(t){return e(
+!==t.user_domain_name&&checkDomain3(t.user_domain_name)?t.domain_controller1?checkIPAndDomain(t.domain_controller1,!1,!1)?t.domain_controller2&&!checkIPAndDomain(t.domain_controller2,!1,!1)?(e(
+#domainCtrlServerAddress2Error
+#domainCtrlServerAddress3
+#domainCtrlServerAddress3Error
+#domainCtrlServerAddress1
+#domainCtrlServerAddress1Error
+#userDomainName
+#userDomainNameError
+).show(),!1))},saveAdSetting:function(t){var n=this;art.dialog.showWait(r.lang[
+)}})},getEditAdUser:function(e){var t=this;art.dialog.showWait(r.lang[
+)}})},showAddAdGroupEdit:function(n){var i=this,a={role_group_name:
+,role_group_domain:
+,role_group_privilege:
+},l=t.template(g,{lang:r.lang,json:a,addADRole:!0,adUsers:n,customRoleName:customRoleName});art.dialog({id:
+,title:r.lang.adConfig.addGroupRole,content:l,cancel:!0,width:600,padding:0,lock:!0,okVal:r.lang[
+#roleId, #groupPrivilege
+,title:r.lang.adConfig.modifyGroupRole,content:l,cancel:!0,width:600,padding:0,lock:!0,okVal:r.lang[
+).selectpicker({})},ok:function(){var t={role_id:n,role_group_name:e(
+).val()};return!!a.validAdGroupEditData(t)&&void a.modifyAdGroup(t,n)}})},validAdGroupEditData:function(t){return e(
+!==t.role_group_name&&/^[a-zA-Z0-9\_\-]+$/.test(t.role_group_name)?!(
+===t.role_group_domain||!checkDomain3(t.role_group_domain))||(e(
+#groupDomainError
+).show(),!1)},addAdGroup:function(e){var t=this;art.dialog.showWait(r.lang[
+))},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.adConfig.addAdUserError,
+)}})},modifyAdGroup:function(e,t){var n=this;e.id=t,art.dialog.showWait(r.lang[
+].wait);var i=new w;i.clear(),delete e.role_id,i.save(e,{type:
+)}})},deleteAdGroup:function(e){var t=this;art.dialog.showWait(r.lang[
+>\r\n                        <%=lang.twoFactorAuth.serverAddress%>\r\n                    </div>\r\n                    <div class=
+/api/settings/radius/general
+).val()),server_address:e(
+),!checkIPAndDomain(t.server_address,!1,!1))return e(
+#serverAddressError
+).eq(r-1).click()},bindTab:function(){var e=this,t=[e.localusers,e.domainusers,e.twoFactorAuth];t.forEach(function(t,n){jQuery(
+,function(n){t.call(e)})})},localusers:function(){new c},domainusers:function(){new u},twoFactorAuth:function(){new d}});return p}),define(
+,altFieldTimeOnly:!0,showTimepicker:!0,timezoneIso8609:!1,timezoneList:null,addSliderAccess:!1,sliderAccessArgs:null},$.extend(this._defaults,this.regional[
+padding-left: 1px
+ui-widget-header ui-helper-clearfix ui-corner-all
+.ui-datepicker-header, .ui-datepicker-calendar
+,S),this._defaults.addSliderAccess){var x=this._defaults.sliderAccessArgs;setTimeout(function(){if(0==$tp.find(
+);n&&n._addTimePicker(e)}},$.datepicker._base_doKeyPress=$.datepicker._doKeyPress,$.datepicker._doKeyPress=function(e){var t=$.datepicker._getInst(e.target),n=$.datepicker._get(t,
+),a&&(a._defaults.showTimepicker=!0,a._addTimePicker(i),a._updateDateTime(i))},$.datepicker._setTime=function(e,t){var n=this._get(e,
+h3c-table no-padding-top
+addBlackList
+addWhiteList
+text!js/templates/config/firewall/firewall_add.html
+addrules
+>\r\n            <span><%=lang.firewall.macAddress%></span>\r\n        </div>\r\n        <div class=
+macAddress
+<%=json.ip_address_from%>
+<%=json.ip_address_to%>
+<%=json.mac_address%>
+#addBlackList
+#addWhiteList
+#addBlackList,#addWhiteList
+,function(){t.isBlack=!0,t.addFireWallList()}),e(
+,function(){t.isBlack=!1,t.addFireWallList()}),e(
+)})},ok:function(){var e={ip_address_from:
+,ip_address_to:
+,mac_address:
+,old_ip_address_from:
+,old_ip_address_to:
+,old_mac_address:
+].closeBtn})},addFireWallList:function(){var n=this,i=t.template(m,{lang:r.lang});art.dialog({id:
+,title:n.isBlack?r.lang.firewall.addBlackList:r.lang.firewall.addWhiteList,content:i,cancel:!0,width:680,padding:0,lock:!0,opacity:.2,fixed:!1,init:function(){n.initDatePicker(),n.initTimePikcer(),e(
+].cancelBtn,function(){n.isBlack?n.sendAddBlackList(e):n.sendAddWhiteList(e)})},okVal:r.lang[
+].wait),_addBlackList=new b,_addBlackList.save(e,{success:function(e,n,i){1===n.cc?(art.dialog.clearWait(),art.dialog.msg(r.lang.firewall.repeatRules,
+)):art.dialog.msg(r.lang.firewall.addRuleSuccess,
+,2,function(){t.getAllInterface()})},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.firewall.addRuleFail,
+)}})},sendAddWhiteList:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(r.lang[
+].wait),_addWhiteList=new _,_addWhiteList.save(e,{success:function(e,n,i){1===n.cc?(art.dialog.clearWait(),art.dialog.msg(r.lang.firewall.repeatRules,
+))},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.firewall.addRuleFail,
+uploadSSL
+text!js/templates/config/ssl/upload_ssl.html
+hidden ssl-priv-admin
+h3c-input-s ssl-priv-admin
+emailAddress
+h3c-input-ss ssl-priv-admin
+h3c-select-s ssl-priv-admin
+#generateSSL,#uploadSSL
+#uploadSSL
+].wait);var t=new h;t.fetch({success:function(t,n,i){art.dialog.clearWait(),e.showUploadDialog(n)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(r.lang.sslCertificate.currentSSLInfoFail,
+)}})},showUploadDialog:function(n){var i=this,a=t.template(u,{lang:r.lang,json:n});art.dialog({id:
+,title:r.lang.sslCertificate.uploadSSL,content:a,cancel:!0,width:680,padding:0,lock:!0,cancelVal:r.lang[
+.ssl-priv-admin
+.btn-file-upload
+,title:r.lang.sslCertificate.generateSSL,content:i,cancel:!0,width:680,padding:0,lock:!0,cancelVal:r.lang[
+#emailAddress
+).val()),!!n.validateGenerateSSL()&&(n.generateSSL(),!0)}})},bindUploadBtnEvents:function(){e(
+].wait);var n=new g;n.fetch({success:function(n,i,a){art.dialog.clearWait(),0===i.cc?t.uploadSSL(e):209===i.cc&&art.dialog.msg(r.lang[
+)}})},uploadSSL:function(t){var n=this.uplaodData,i=this;art.dialog.confirm(r.lang.sslCertificate.uploadSSLConfirm,r.lang[
+,success:function(e,t,n){i.completeTip(r.lang.sslCertificate.uploadSSL),i.showUploadSuccess(t)},error:function(){art.dialog.msg(r.lang.sslCertificate.uploadFail,
+):art.dialog.warn(r.lang.sslCertificate.uploadSSLError,r.lang[
+].closeBtn)}})})},showUploadSuccess:function(t){e(
+).val(t.private_key_date)},validateUploadSSL:function(){e(
+js/views/loginInformationConfig
+).eq(r-1).click()},bindTab:function(){var e=this,t=[e.firewall,e.sslCertificate,e.pfr,e.loginInforConfig];t.forEach(function(t,n){jQuery(
+,function(n){t.call(e)})})},firewall:function(){new c},sslCertificate:function(){new u},loginInforConfig:function(){new d},pfr:function(){new p}});return h}),define(
+editRead
+><%=lang.snmpConfig.editReadCommunity%></label>\r\n                            </legend>\r\n                            <div>\r\n                            <div class=
+><%=lang.snmpConfig.readCommunity%></div>\r\n                                <div class=
+snmpOnlyRead
+<%=json.readCommunity%>\
+><%=lang.snmpConfig.confirmReadCommunity%></div>\r\n                                <div class=
+snmpConfirRead
+editReadWrite
+===n.readCommunity?n.readCommunity=
+#snmpOnlyRead
+#editRead
+#snmpOnlyRead, #snmpConfirRead
+#editReadWrite
+#editRead:checked
+#editReadWrite:checked
+#snmpConfirRead
+,i.lang.snmpConfig.invalidOnlyRead).css(
+,i.lang.snmpConfig.OnlyReadEmpty).css(
+,i.lang.snmpConfig.onlyReadDifferent).css(
+ ><%=lang.ldapConfig.advancedSetting%></button>\r\n</div>\r\n<div class=
+session_index\
+serverAddressForAll
+<%=json.cd_remote_server_address%>
+serverAddressForAllError
+domainNameAll
+<%=json.domainName1%>
+serverAddressForCD1
+serverAddressForCD1Error
+domainName1
+serverAddressForCD2
+<%=json.fd_remote_server_address%>
+serverAddressForCD2Error
+domainName2
+<%=json.domainName2%>
+serverAddressForCD3
+<%=json.hd_remote_server_address%>
+serverAddressForCD3Error
+domainName3
+<%=json.domainName3%>
+),i.getMediaData(t,n))},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(l.lang.imageRedirection.startMediaFail,
+).html(a)}n.displayRemoteConfigData([])},judgeMediaData:function(e,t,n){var a=this;a.fetchStartMediaTime++;var r=!1;for(i=0;i<n.length;i++)
+)):i.startMediaTime=setTimeout(function(){i.getMediaData(t,n)},2500)},stopMedia:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(l.lang[
+,title:l.lang.imageRedirection.generalSettings,content:a,cancel:!0,width:620,padding:0,lock:!0,cancelVal:l.lang[
+.session_index
+#domainName
+#serverAddressForCD
+#serverAddressForAll
+)?1:0,cd_remote_server_address:e(
+#serverAddressForCD1
+).val(),cd_remote_domain_name:e(
+#domainNameAll
+#domainName1
+).val(),fd_remote_server_address:e(
+).val(),fd_remote_domain_name:e(
+).val(),hd_remote_server_address:e(
+).val(),hd_remote_domain_name:e(
+].closeBtn),!1):1!==t.mount_cd||IP.checkAll(t.cd_remote_server_address)||checkIPV6(t.cd_remote_server_address,!1,!1)?1===t.mount_cd&&void 0!==t.cd_remote_source_path&&
+#serverAddressForCD3
+,l.lang.imageRedirection.invalidHdRemoteServerAddress).removeClass(
+#serverAddressForCD2
+,l.lang.imageRedirection.invalidFdRemoteServerAddress).removeClass(
+,l.lang.imageRedirection.invalidAllRemoteServerAddress).removeClass(
+,l.lang.imageRedirection.invalidCdRemoteServerAddress).removeClass(
+).show(),!1)},checkNTP:function(t,n,i){return t&&!checkIPAndDomain(t,!1,!1)?(e(n).focus(),e(n).addClass(
+),e(i).hide(),!0):(e(n).focus().addClass(
+><%= lang.dashboard.onlineSessionUsers %></span>\r\n                <a class=
+sessionDetails
+>\r\n                <%=lang.dashboard.ipAddress%>\r\n            </div>\r\n        <div class=
+>\r\n                <%=lang.dashboard.macAddress%>\r\n            </div>\r\n            <div class=
+>\r\n                    <%= lang.dashboard.ipAddress %>\r\n                </div>\r\n                <div class=
+>\r\n                    <%= lang.dashboard.macAddress %>\r\n                </div>\r\n                <div class=
+,initialize:function(){var e=t.template(o,{lang:r.lang});this.$el.html(e),this.showContent(),r.isG5()||(r.clearGetPower(),r.clearGetUID()),this.bindHeaderBtn()},showContent:function(){e(
+)}),this.getBasicInfo(),this.getShortcut(),this.getSystemHealth()},bindHeaderBtn:function(){var t=this;e(
+).html(this.uidStatusToText(t.status)),r.showUid(t.status),r.isUidShow=!0,r.clearGetUID(),r.getUidInfo()},showSessionInfo:function(t){e(
++t[0].ipv4_address),e(
++t[0].mac_address)):r.isAliCloud()||
++t[1].ipv4_address),e(
++t[1].mac_address)):
++r.lang.dashboard.ipAddress+
++n(t[0].interface_name)+t[0].ipv4_address+
++n(t[1].interface_name)+t[1].ipv4_address+
++n(t[0].interface_name)+t[0].mac_address+
++n(t[1].interface_name)+t[1].mac_address+
++t[0].mac_address))},getServerName:function(){var t=new b;r.pushRequest(t.fetch({success:function(t,n,i){0===n.cc&&e(
+)){var s=sessionStorage.getItem(
+><%=lang.pef.smtpServerAddress%></span>\r\n                    <span id=
+><%=lang.pef.senderEmailAddress%></span>\r\n                    <span id=
+><%= lang.pef.emailAddress %></div>\r\n    <!-- 氓庐職盲鹿聣盲赂聙盲赂陋猫隆篓忙聽录氓聟聝莽麓聽 -->\r\n    <table id=
+addEmailAddress
+>\r\n            <span><%=lang.pef.targetAddress%></span>\r\n        </div>\r\n        <div class=
+targetAddress
+senderSnmpAddressError
+>\r\n            <span><%=lang.pef.emailAddress%></span>\r\n        </div>\r\n        <div class=
+senderEmailAddressError
+senderSubjectAddressError
+text!js/templates/config/pef/pef_smpt_add.html
+>\r\n                <%_.each(json,function(e,k){ if((e.destination_address === undefined || e.destination_address.trim() === 
+snmp-add
+><%=lang.pef.btnAdd%></button>\r\n            <%}else{%>\r\n             <button class=
+text!js/templates/config/pef/pef_snmp_add.html
+add-alert-policy
+>\r\n              <%= lang.ldapConfig.modifyBtn %></button>\r\n          </td>\r\n        </tr>\r\n        <%})%>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</div>\r\n
+>\r\n            <span><%=lang.pef.trapServerAddress%></span>\r\n        </div>\r\n        <div class=
+ServerAddress
+trapServerAddressError
+><%=lang.sysLog.sdrLogFunc%></span>\r\n                  <span><%=setState(sdrLogInfo.enable)%></span>\r\n              </span>\r\n              <span class=
+><%=lang.sysLog.protocol%></span>\r\n                  <span><%=transportProtocol(sdrLogInfo.trans_protocol)%></span>\r\n              </span>\r\n              <span class=
+><%=lang.sysLog.serverAddress%></span>\r\n                  <span><%=sdrLogInfo.host_ip%></span>\r\n              </span>\r\n              <span class=
+><%=lang.pef.snmpPort%></span>\r\n                  <span><%=sdrLogInfo.host_port%></span>\r\n              </span>\r\n              <span class=
+><%=lang.sysLog.timeInterval%></span>\r\n                <span><%=sdrLogInfo.time_interval%></span>\r\n            </span>\r\n          </div>\r\n      </div>\r\n  </div>\r\n  <div class=
+><%=lang.sysLog.telnetLogFunc%></span>\r\n                  <span><%=setState(telnetLogInfo.enable)%></span>\r\n              </span>\r\n              <span class=
+><%=lang.sysLog.protocol%></span>\r\n                  <span><%=transportProtocol(telnetLogInfo.trans_protocol)%></span>\r\n              </span>\r\n              <span class=
+><%=lang.sysLog.serverAddress%></span>\r\n                  <span><%=telnetLogInfo.host_ip%></span>\r\n              </span>\r\n              <span class=
+><%=lang.pef.snmpPort%></span>\r\n                  <span><%=telnetLogInfo.host_port%></span>\r\n              </span>\r\n          </div>\r\n      </div>\r\n  </div>\r\n  <div class=
+>\r\n            <span><%=lang.sysLog.serverAddress%></span>\r\n        </div>\r\n        <div class=
+>\r\n                        <%=lang.pef.smtpServerAddress%></div>\r\n                    <div class=
+smtpServerAddressModidy
+smtpServerAddressError
+>\r\n                        <%=lang.pef.senderEmailAddress%></div>\r\n                    <div class=
+senderEmailAddressModify
+btn btn-file-upload 
+><%=lang.sysLog.serverAddress%></div>\r\n                        <div class=
+sdrServerAddress
+sdrServerAddressError
+telnetServerAddress
+telnetServerAddressError
+)}})},getSdrLogInfo:function(){var e=this;art.dialog.clearWait(),art.dialog.showWait(s.lang[
+,title:s.lang.diagnosis.diagnosisConfig,content:a,cancel:!0,padding:0,width:710,lock:!0,cancelVal:s.lang[
+,title:s.lang.pef.setSNMP,content:c,cancel:!0,padding:0,width:680,lock:!0,cancelVal:s.lang[
+.snmp-modify,.snmp-delete,.snmp-add
+,title:s.lang.sysLog.path,content:i,cancel:!0,padding:0,width:800,lock:!0,cancelVal:s.lang[
+).val())};return!!t.uploadSyslogCert(n)&&(t.saveSysLogSetting(n),!0)}}),t.bindSyslogConfig()},bindSyslogConfig:function(){var t=this;0===t.sysLogSetting.sys_enable&&(e(
+).val(i)})},showConfigSdrLog:function(){var t=this,i=n.template(A,{lang:s.lang,json:t.sdrLogInfo});art.dialog.clearWait(),art.dialog({id:
+,title:s.lang.sysLog.sdrLog,content:i,cancel:!0,padding:0,width:700,lock:!0,cancelVal:s.lang[
+#sdrServerAddressError,#sdrPortError,#timeIntervalError
+#sdrServerAddress
+,title:s.lang.sysLog.telnetLog,content:i,cancel:!0,padding:0,width:700,lock:!0,cancelVal:s.lang[
+#telnetServerAddressError,#telnetPortError
+#telnetServerAddress
+#sdrServerAddressError,#telnetServerAddressError,#sdrPortError,#telnetPortError,#timeIntervalError
+#sdrServerAddressError
+#telnetServerAddressError
+.snmp-add
+);t.addAlertPolicy(n)}),e(
+)}})},uploadSyslogCert:function(t){var n,i,a;n=e(
+upload_syslog_cacert1
+upload_syslog_cert1
+upload_syslog_key1
+/api/settings/syslogupload
+):art.dialog.msg(s.lang.pef.uploadCertFail,
+,title:s.lang.sysLog.serverFormat,content:a,cancel:!0,width:600,padding:0,lock:!0,cancelVal:s.lang[
+#port,#serverAddress
+,title:s.lang.pef.modifyAlertPolicyItem,content:u,cancel:!0,width:580,padding:0,lock:!0,opacity:.2,fixed:!1,init:function(){e(
+)&&(d.alert_string=1),i.sendAddAlertPolicy(d,!1)},okVal:s.lang[
+)}})},addAlertPolicy:function(t){var i=this;art.dialog.showWait(s.lang[
+,title:s.lang.pef.addAlertPolicyItem,content:c,cancel:!0,width:580,padding:0,lock:!0,opacity:.2,fixed:!1,init:function(){e(
+)&&(u.alert_string=1),
+i.sendAddAlertPolicy(u,!0)},okVal:s.lang[
+)}})},sendAddAlertPolicy:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(s.lang[
+,success:function(e,n,i){art.dialog.msg(s.lang.pef.addSmtpPefSuccess,
+,2,function(){t.fetchLanDestinations()})},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(s.lang.pef.addSmtpPefFail,
+#setAlarmEmailAddressBox
+),e.fetchTime++,2===e.fetchTime&&(art.dialog.clearWait(),e.showSmtpPef())}})},uploadCert:function(t){var n,i,a,r=this;n=e(
+upload_cacert1
+upload_cert1
+upload_key1
+/api/settings/smtp/smtpupload
+#smtpServerAddress
+#senderEmailAddress
+#smtpServerAddressModidy
+#senderEmailAddressModify
+),1!==t.smtp_enable||checkIPAndDomain(t.server_ip,!1,!1)?(e(
+).html(s.lang.pef.invalidSenderEmailAddress),!1):(e(
+).html(s.lang.pef.invalidSmtpServerAddress),!1)},fetchLanDestinations:function(){var e=this;art.dialog.clearWait(),art.dialog.showWait(s.lang[
+)}})},sendAddSmtpPef:function(e){var t=this;art.dialog.clearWait(),art.dialog.showWait(s.lang[
+};t.sendAddAlertPolicy(r)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(s.lang.pef.addSmtpPefFail,
+,2,function(){t.fetchSNMPPort=0,t.getTrapServer(),t.getSnmpSetting(),t.getSnmpUser()}):3===n.cc?art.dialog.msg(s.lang.pef.trapDesAddrEmpty+
+==c.destination_type&&c.destination_address&&(l++,r+=
++c.destination_address+
+#setAlarmEmailAddressBox tbody
+#addEmailAddress
+.table-send,.table-test-resulte,.table-update,.table-delete,.table-add,#addEmailAddress
+,function(e){i.showSnmpTrap(t,n)})},deleteSmtpPef:function(e){var t=this;art.dialog.confirm(s.lang.pef.confirmDeleteSmtpAddr,s.lang[
+].wait);var t=new L;t.fetch({success:function(t,n,i){art.dialog.clearWait(),e.addSmptEmail(n)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(s.lang.pef.updateSmtpPefFail,
+)}})},addSmptEmail:function(t){var i=this,a=this.fetchUser,r=e.cookie(
+showAddSmtpPef
+).val());i.fetchLanDataforAdd(t)}),e(
+===e.destination_address&&
+].artCancel,function(){i.sendAddSmtpPef(e)}):i.sendAddSmtpPef(e),!0)}})},showEditSmtpPef:function(t,i){var a=this,r=e.cookie(
+,title:s.lang.pef.setAlarm,content:l,cancel:!0,width:600,padding:0,lock:!0,cancelVal:s.lang[
+#targetAddress
+,title:s.lang.pef.modifyTrapServer,content:r,cancel:!0,width:600,padding:0,lock:!0,cancelVal:s.lang[
+#ServerAddress
+)}})},fetchUsrForAdd:function(){var e=this;art.dialog.showWait(s.lang[
+].wait);var t=new B;t.fetch({success:function(t,n,i){e.showAddSmtpPef(n)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(s.lang.pef.addAlertPolicyFail,
+].wait);var n=new B;n.fetch({success:function(n,i,a){t.showEditSmtpPef(e,i)},error:function(e,t,n){art.dialog.clearWait(),art.dialog.msg(s.lang.pef.addAlertPolicyFail,
+#per-edit-box #emailAddress
+).val(t.subject)},getEditSmtpPefData:function(t){var n={destination_address:e(
+).val();return checkIPAndDomain(t,!1,!1)||
+#Trap-sever-edit #ServerAddress
+).html(s.lang.pef.invalidTrapDesAddr),!1)},validateEditSmtpPefData:function(t){if(e(
+#per-edit-box #targetAddress
+).html(s.lang.pef.illegalTargetAddress),!1;return!0},bindSmtpBtn:function(){var e=this;$(
+,title:s.lang.pef.setSMTP,content:l,cancel:!0,padding:0,width:600,lock:!0,cancelVal:s.lang[
+)),n.smtp_enable&&n.smtp_authentication&&(n.password=linebrk(hex2b64(i.encrypt(n.password))),n.RSAEncryptFlag=1),t.uploadCert(n),!0}return!1}})},showConfigSMTPData:function(t){1===t.smtp_enable?(e(
+><%=lang.public.advancedSetting%></button>\r\n        <%if(json.cc === 0){%>\r\n        <div class=
+,title:r.lang.systemThreshold.title,content:a,cancel:!0,width:730,padding:0,lock:!0,cancelVal:r.lang[
+)):(e(this).addClass(
+,showDelay:0,hideDelay:0,borderRadius:10,formatter:function(e){var t=
+,radius:[
+>\r\n      <%=lang.unitedManagement.addDevice%>\r\n    </button>\r\n    <button class=
+>\r\n  <thead>\r\n    <tr>\r\n      <th><input type=
+,title:r.lang.unitedManagement.addDevice,content:i,cancel:!0,width:620,padding:15,lock:!0,opacity:.2,init:function(){},ok:function(){e(
+).html(r.lang.login.noticeNameRules),!1):l.match(/^.{1,20}$/)?void n.searchDevice():(e(
+).html(r.lang.login.noticePwdEmpty),!1):(e(
+).html(r.lang.login.noticeNameEmpty),!1)},okVal:r.lang[
+);break;case 5:art.dialog.msg(r.lang.unitedManagement.isAdding,
+);break;default:art.dialog.msg(r.lang.unitedManagement.addFailed,
+)}},error:function(){art.dialog.clearWait(),art.dialog.msg(r.lang.unitedManagement.addFailed,
+&Remotelogin_RSA=1&log_type=1&Remote_RSA_Value=
+/viewer.html?qsessionid=
+padding-left: 47px;
+><%= adapterData.Manufacture %></div>\r\n        </div>\r\n        <!-- 氓聻聥氓聫路-->\r\n        <%if(custom_id === 6){%>\r\n        <div class=
+><%= adapterData.chip_model %></div>\r\n        </div>\r\n        <%}else{%>\r\n        <div class=
+><%= adapterData.model %></div>\r\n        </div>\r\n        <%}%>\r\n        <%if(custom_id === 6){%>\r\n        <div class=
+><%= adapterData.type %></div>\r\n        </div>\r\n         <%}%>\r\n        <!--氓聸潞盲禄露莽聣聢忙聹卢-->\r\n        <div class=
+><%= adapterData.firmware_ver %></div>\r\n        </div>\r\n        <!--Package莽聣聢忙聹卢-->\r\n        <%if(adapterData.package_ver  !== undefined && adapterData.package_ver  !== \
+><%= adapterData.package_ver  %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--茅聟聧莽陆庐莽聣聢忙聹卢-->\r\n        <%if(adapterData.seeprom_ver !== undefined && adapterData.seeprom_ver !== \
+><%= adapterData.seeprom_ver %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--氓潞聫氓聢聴氓聫路-->\r\n        <%if(adapterData.serial !== undefined && adapterData.serial !== \
+><%= adapterData.serial %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--WWN-->\r\n        <%if(adapterData.wwn !== undefined && adapterData.wwn !== \
+><%= adapterData.speed_gbps %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--莽录聯氓颅聵氓庐鹿茅聡聫-->\r\n        <%if(!lsi_hba_flag && adapterData.ddr_size !== \
+><%= adapterData.ddr_size %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--Flash氓聧隆-->\r\n        <%if(!lsi_hba_flag && adapterData.subsys_stat !== \
+><%= cacheToLang(adapterData.subsys_stat) %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--猫露聟莽潞搂莽聰碌氓庐鹿-->\r\n        <%if(!lsi_hba_flag && adapterData.cap_stat !== \
+><%= superBatteryToLang(adapterData.cap_stat) %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--氓聟聟莽聰碌莽聤露忙聙聛-->\r\n        <%if(!lsi_hba_flag && adapterData.cap_perc !== \
+><%= adapterData.cap_perc %></div>\r\n        </div>\r\n        <%}%>\r\n        <!--忙聰炉忙聦聛RAID莽潞搂氓聢芦-->\r\n        <% if(adapterData.raid_level !== \
+><%= adapterData.raid_level%></div>\r\n        </div>\r\n        <%}%>\r\n        <!--忙聲聟茅職聹忙聫聫猫驴掳-->\r\n        <%if(adapterData.fault_desc !== \
+><%= errorMsgDetail(adapterData.fault_desc) %></div>\r\n            </div>\r\n        <%}%>\r\n    </div>\r\n</div>
+icon-add
+){%>(<%=phyStatusToLang(e1.status, adapterType)%><%if(e1.foreign && (e1.foreign.toLowerCase() === 
+><%= logicalData.strip_size %></div>\r\n            </div>\r\n        <%}%>\r\n        <!-- 猫炉禄莽颅聳莽聲楼 -->\r\n        <%if(logicalData.read_policy !== undefined && logicalData.read_policy !== 
+><%= lang.raid.readPolicy %></div>\r\n                <div class=
+><%= logicalData.read_policy %></div>\r\n            </div>\r\n        <%}%>\r\n        <!-- 氓聠聶莽颅聳莽聲楼 -->\r\n        <%if(logicalData.write_policy !== undefined && logicalData.write_policy !== 
+>\r\n                                    <thead>\r\n                                        <tr>\r\n                                        <th class=
+padding-left: 28px;
+>\r\n                                <%=lang.raid.readPolicy%>\r\n                            </div>\r\n                            <div class=
+readPolicy
+>No read ahead</option>\r\n                                    <%if(currentCardName.indexOf(
+ selected>Read/Write</option>\r\n                                    <option value=
+>Read only</option>\r\n                                    <option value=
+1(ADM)
+>1(ADM)</option><%}%>\r\n                            <%if(is_support_raid_level(
+>10(ADM)</option><%}%>\r\n                        </select>\r\n                    </div>\r\n                </div>  \r\n                <div class=
+in n.adapter){var o=n.adapter.raid_level||
+).val()):0,read_policy:t.isLSI?parseInt(e(
+10(ADM)
+),e(this).children().addClass(
+),e(this).parent().addClass(
+)}})},showRaidInfo:function(t,n){var i=this,a=t.adapter;if(1===a.status)i.showStorageDetaiInfo(t,n);else{var l;l=2===a.status?r.lang.hardwareInfo.powerOffTips:void 0===r.lang.storage[
+)),1===a.data_valid&&i.showStorageDetaiInfo(t,n)}},showStorageDetaiInfo:function(n,i){var a=this,l=n.adapter,s=-1!==l.type.indexOf(
+.logical-delete, .create-logical,.create-logical .icon-add
+Ready
+>\r\n                                        <%=lang.networkConfig.ipv4Address%></div>\r\n                                    <div><%=json.ipv4_enable ? json.ipv4_address : \
+>\r\n                                        <%=lang.networkConfig.ipv6Address1%></div>\r\n                                    <div><%=json.ipv6_enable ? json.ipv6_address : \
+>\r\n                                        <%=lang.networkConfig.localLinkAddress%></div>\r\n                                    <div><%=json.ipv6_enable ? json.ipv6_localLinkAddress : \
+subSection  <%if(json.ipv6_StatelessAddress==\
+>\r\n                                        <%=lang.networkConfig.ipv6Address2%></div>\r\n                                    <div><%=json.ipv6_enable ? json.ipv6_StatelessAddress : \
+portAdaptaion
+padding-left: 0;
+.portAdaptaion
+>\r\n                            <%=lang.networkConfigDNS.ipv4DNSAddress%>\r\n                        </label>\r\n                        <input type=
+>\r\n                            <%=lang.networkConfigDNS.ipv6DNSAddress%>\r\n                        </label>\r\n                    </div>\r\n                </div>\r\n                <div class=
+>\r\n                        <%=lang.networkConfigDNS.domainName%>\r\n                    </div>\r\n                    <div class=
+domain_name
+<%=dns.domain_name%>
+domainNameError
+):136===a.cc?art.dialog.msg(r.lang.networkConfigDNS.invalidDomainName,
+)?1:0,domain_name:e(
+#domain_name
+#domain_name,#dns_server1,#dns_server2,#dns_server3
+!==t.domain_name){if(1===t.dns_status&&0===t.dns_manual&&!checkDomain(t.domain_name))return e(
+).html(r.lang.networkConfigDNS.invalidDomainName),!1;e(
+netPortAdaptation
+><%= lang.wifi.IPAddress %></div>\r\n                    <div class=
+wifiAddress
+<%= data.ip_address %>
+wifiAddressError
+>\r\n                        <%=lang.wifi.address%>\r\n                    </div>\r\n                    <div class=
+<%= data.dhcp_addr_start %>
+<%= data.dhcp_addr_end %>
+><%= lang.wifi.addressRange %></p>\r\n                        <p class=
+IPAddressError1
+IPAddressError2
+#wifiAddress
+,function(){t.validateIPAddress(),t.validateStartIP(),t.validateEndIP()}),e(
+),!1)},validateIPAddress:function(){var t=e(
+).html(r.lang.wifi.wifiAddressBlank),!1):IP.checkAll(t)?(e(
+).html(r.lang.wifi.wifiAddressTip),!0):(e(
+).html(r.lang.wifi.wifiAddressInvalid),!1)},validateStartIP:function(){var t=this,n=e(
+}],ip_address:e(
+).val(),dhcp_addr_start:e(
+).val(),dhcp_addr_end:e(
+>\r\n                    <%=lang.networkConfig.autoFetchIpAddress%></div>\r\n                <div class=
+>\r\n                    <%=lang.networkConfig.ipv4Address%></div>\r\n                <div class=
+ipv4_address
+>\r\n                    <%=lang.networkConfig.ipv6Address%></div>\r\n                <div class=
+ipv6_address
+#ipv4_address
+#ipv4_address,#ipv4_subnet,#ipv4_gateway
+#ipv6_address
+#ipv6_address,#ipv6_gateway,#ipv6_prefix
+#mac_address
+)?1:0,ipv4_address:e(
+)?1:0,ipv6_address:e(
+].closeBtn),!1;if(1===t.ipv4_enable&&0===t.ipv4_dhcp_enable&&!IP.checkAll(t.ipv4_address))return e(
+).html(r.lang.networkConfig.invalidIPv4Address),!1;if(1===t.ipv4_enable&&0===t.ipv4_dhcp_enable&&!isSubnet(t.ipv4_subnet))return e(
+).html(r.lang.networkConfig.invalidIPv4Subnet),!1;if(1===t.ipv4_enable&&0===t.ipv4_dhcp_enable&&checkBroadcast(t.ipv4_address,t.ipv4_subnet))return e(
+).html(r.lang.networkConfig.invalidIPv4Address),!1;if(1===t.ipv4_enable&&0===t.ipv4_dhcp_enable&&
+).html(r.lang.networkConfig.invalidGateway),!1;if(1===t.ipv6_enable&&0===t.ipv6_dhcp_enable&&!checkIPV6(t.ipv6_address,!1,!1))return e(
+).html(r.lang.networkConfig.invalidIPv6Address),!1;if(1===t.ipv6_enable&&0===t.ipv6_dhcp_enable&&!checkIPV6(t.ipv6_gateway,!1,!1))return e(
+)}})},bindRadio:function(t,n,i){var a=this;i=parseInt(i),1===i?(e(
+input:radio[name=port]
+input:radio[name=nic]
+],function(e,t,n,i,a,r,l,s,o,c,u,d,p,h,f,g,m,v,b,_,y,w,S,x,k,C,T,D,I,A,M,P,L,E,c){var j=Backbone.Router.extend({routes:{login:
+},before:function(){t.abortRequest()},initialize:function(){Backbone.$.ajaxSetup({headers:{
+);s.addClass(
+}),location.reload()}),e(
+/loaded
+/ipad
+/templates/header.html
+/thead
+/api/settings/service-sessions/
+/login
+/templates/login.html
+/views/loginView
+/eHBhY2tldCBlbmQ9InIiPz7Zrs2VAAADz0lEQVR42uyZW0gVURSG56hpaqaU3TXMC0YJFpZCBZVvFQXhS0ER9RB0oSLKB3suitDqLbrRQ/YQFVGR9FAUFAXRha7YjcISJZW85d3Tv/AfnIY5s/eMx2NGCz5mztkze9asvfaatfYONKZlfzcMI8lwllNgn
+/RT8/pZj5sbt1IiPkEXnE6v/OocxUxWLLnsYDJMga3p5KY45sbsgGbN3cZgxuy7aTutwADAAb
+/n.currentFrameHeader.SourceModeInfo.X
+/n.currentFrameHeader.SourceModeInfo.Y
+/this.currentFrameHeader.SourceModeInfo.X
+/this.currentFrameHeader.SourceModeInfo.Y
+/api/maintenance/upload_restore_process
+/templates/config/service/service_sessions.html
+/templates/config/users/user_add.html
+/templates/config/users/domain_users.html
+/templates/config/ldapConfig/ldap_config.html
+/templates/config/ldapConfig/ldap_user_edit.html
+/templates/config/ldapConfig/ldap_setting_edit.html
+/templates/config/ad/ad_list.html
+/templates/config/ad/ad_setting.html
+/templates/config/ad/ad_group_edit.html
+/views/domainUsersView
+/templates/config/firewall/firewall_add.html
+/templates/config/ssl/upload_ssl.html
+/views/loginInformationConfig
+/templates/config/pef/pef_smpt_add.html
+/templates/config/pef/pef_snmp_add.html
+---API-HITS---
+/api/session
+/api/actions/power
+/api/about
+/api/message/entries_info
+/api/oem_flag
+/api/session/info
+/api/settings/service-sessions/
+/api/config/get_ntp
+/api/properties
+/api/chassis-status
+/api/remote/uid
+/api/message/last_event_id/
+/api/config/boot
+/api/config/system_boot_order
+/api/config/fusion_par
+/api/safe_switch
+/api/oem_info
+/api/fru
+/api/setting/security/bulletin
+/api/settings/dns/host
+/api/system/firmware
+/api/rsapublickey
+/api/tfa_status
+/api/remote/login/session
+/api/reset_pass
+/api/maintenance/fwimage_location
+/api/maintenance/firmware/type
+/api/maintenance/flash
+/api/maintenance/firmware/verification
+/api/maintenance/firmware/flash_progress
+/api/maintenance/firmware/step
+/api/maintenance/firmware/first_step
+/api/maintenance/firmware/browser
+/api/maintenance/firmware/check_flash_state
+/api/maintenance/flashmode
+/api/maintenance/firmware/upgrade
+/api/maintenance/repo_md5
+/api/maintenance/REPO/firmware
+/api/maintenance/firmware
+/api/maintenance/firmware/dwldfwimg
+/api/maintenance/firmware/dwldfwstatus-progress
+/api/maintenance/restore_hdm
+/api/maintenance/primary_backup_version
+/api/maintenance/primary_backup_switch
+/api/reset_cpld
+/api/system/memory_info
+/api/system/cm_info
+/api/system/processor_info
+/api/system/assetTag
+/api/system/curve_sensor_data
+/api/system/curve_sensor_name
+/api/system/curve_sensor_crit_data
+/api/system/gpuinfo
+/api/system/pcie
+/api/system/fc_info
+/api/system/nic_info
+/api/settings/netcardlldp
+/api/system/qat_info
+/api/system/fpga_info
+/api/system/board_info
+/api/health/video
+/api/health/video_cfg
+/api/health/bsod
+/api/health/system_post_code
+/api/config/securitypanel_conf
+/api/settings/serviceudisk_conf
+/api/logs
+/api/health/eventlog_cfg
+/api/logs/event
+/api/logs/csv_event_log
+/api/health
+/api/health/hdm_log
+/api/logs/csv_hdm_log
+/api/health/sds/log
+/api/health/sds/status
+/api/sensors
+/api/system/fan_info
+/api/config/fan
+/api/hdd_led
+/api/system_health
+/api/remote/vnc_pwd_complexity
+/api/remote/vnc_password
+/api/settings/kvm/mode
+/api/settings/services
+/api/kvm/token
+/api/settings/media/instance
+/api/maintenance/restore_defaults
+/api/maintenance/hdm_restore_factory_status
+/api/maintenance/restore_factory
+/api/maintenance/
+/api/maintenance/upload_restore_process
+/api/settings/network-interfaces
+/api/settings/service-sessions
+/api/power/physicbutton
+/api/power/restore_config
+/api/system/power_info
+/api/power/power_mode
+/api/power/capping
+/api/power/sensorthreshold
+/api/power/curve_all_data
+/api/power/crit_data
+/api/power/gpu_power_limit
+/api/config/cpu_consumption
+/api/power/performance
+/api/settings/users
+/api/setting/password/rule
+/api/settings/user_privilege
+/api/settings/user/ssh-key-upload
+/api/settings/user/ssh-key-upload/
+/api/settings/ldap-settings
+/api/settings/ldap-users
+/api/settings/active_directory_settings
+/api/settings/active_directory_users
+/api/settings/radius/general
+/api/settings/firewall-ip-mac-rule-forbid
+/api/settings/firewall-ip-mac-rule-allow
+/api/settings/ssl/certificate
+/api/settings/ssl/certificate-info
+/api/operations/ssl/certificate/generate
+/api/settings/pfr-settings-info
+/api/tcg_status
+/api/settings/snmp_version
+/api/settings/media/general
+/api/settings/media/remote/configurations
+/api/settings/media/remote/images
+/api/settings/media/remote/start-media
+/api/settings/media/remote/stop-media
+/api/config/ntp
+/api/config/ntp_cfg
+/api/config/timezone
+/api/maintenance/fireware/reboot_tip
+/api/settings/network
+/api/uis/server_name
+/api/uuid
+/api/power/nmi
+/api/power/mca_cfg
+/api/settings/pef/lan_destinations
+/api/settings/pef/send_test_alert
+/api/settings/smtp
+/api/settings/pef/alert_policies
+/api/settings/pef/snmp
+/api/settings/pef/trap_snmp_conf
+/api/settings/pef/snmp/send_snmptrap_test
+/api/settings/syslog_msg_conf
+/api/settings/syslog_remote_conf
+/api/settings/emergdiag_conf
+/api/settings/remote_sdrlog_conf
+/api/settings/remote_hostlog_conf
+/api/settings/syslogupload
+/api/settings/smtp/smtpupload
+/api/system/sys_source_usage_info
+/api/config/syssource/usage
+/api/system/cupsdata
+/api/system/curve_cpu_data
+/api/system/curve_mem_data
+/api/system/curve_io_data
+/api/um/devstatus
+/api/um/deldev
+/api/um/devsearch
+/api/um/power_operate
+/api/um/hdm
+/api/um/h5_kvm
+/api/ip/solmode
+/api/system/storageinfo/ctrl
+/api/remote/logical_config
+/api/remote/physical_config
+/api/hdd/led
+/api/remote/jboduid_config
+/api/remote/hotspare_config
+/api/remote/delete_raid
+/api/system/storageinfo/summary
+/api/system/storageinfo/ctrl/list
+/api/system/storageinfo/hdd/list
+/api/system/nvmeinfo
+/api/system/m2nvmeinfo
+/api/system/storageinfo/jbod/list
+/api/settings/show_network_link
+/api/settings/ncsi
+/api/settings/sharedportenable
+/api/settings/dns
+/api/settings/dns/restart
+/api/settings/network_portmode
+/api/settings/lldpinfo
+/api/settings/wireless
+/api/power/curve_input_voltage
+/api/get_service_port

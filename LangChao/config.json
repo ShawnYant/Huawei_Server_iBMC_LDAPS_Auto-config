@@ -1,0 +1,27 @@
+{
+    "ad_general": {
+        "domain_controller1": "172.18.88.247",
+        "domain_controller2": "",
+        "domain_controller3": "",
+        "enable": 1,
+        "id": 1,
+        "secret_password": "Cug@2027",
+        "secret_username": "ibmccloud",
+        "ssl_enable": 0,
+        "user_domain_name": "hkunicom.com"
+    },
+    "role_group": {
+        "id": 1,
+        "role_group_domain": "hkunicom.com",
+        "role_group_kvm_privilege": 0,
+        "role_group_name": "hk",
+        "role_group_privilege": "administrator",
+        "role_group_vmedia_privilege": 0,
+        "role_group_withoem_privilege": "none"
+    },
+    "verify_login": {
+        "enabled": true,
+        "username": "qiyu",
+        "password": "Cug2025"
+    }
+}

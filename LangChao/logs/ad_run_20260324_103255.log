@@ -1,0 +1,23 @@
+2026-03-24 10:32:55,223 [INFO] 开始通过浪潮 AD 接口配置 10 台服务器...
+2026-03-24 10:33:10,611 [WARNING] 172.19.41.48 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:10,612 [INFO] [FAILED] 172.19.41.48: ad_general=True, role_group=False
+2026-03-24 10:33:10,816 [WARNING] 172.19.41.52 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:10,818 [INFO] [FAILED] 172.19.41.52: ad_general=True, role_group=False
+2026-03-24 10:33:11,419 [WARNING] 172.19.41.53 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:11,421 [INFO] [FAILED] 172.19.41.53: ad_general=True, role_group=False
+2026-03-24 10:33:11,983 [WARNING] 172.19.41.54 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:11,984 [INFO] [FAILED] 172.19.41.54: ad_general=True, role_group=False
+2026-03-24 10:33:12,571 [WARNING] 172.19.41.55 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:12,573 [INFO] [FAILED] 172.19.41.55: ad_general=True, role_group=False
+2026-03-24 10:33:12,695 [WARNING] 172.19.41.46 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:12,697 [INFO] [FAILED] 172.19.41.46: ad_general=True, role_group=False
+2026-03-24 10:33:12,889 [WARNING] 172.19.41.49 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:12,890 [INFO] [FAILED] 172.19.41.49: ad_general=True, role_group=False
+2026-03-24 10:33:13,114 [WARNING] 172.19.41.47 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:13,116 [INFO] [FAILED] 172.19.41.47: ad_general=True, role_group=False
+2026-03-24 10:33:15,215 [WARNING] 172.19.41.51 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:15,217 [INFO] [FAILED] 172.19.41.51: ad_general=True, role_group=False
+2026-03-24 10:33:16,400 [WARNING] 172.19.41.50 AD role group verify failed: {'id': 1, 'role_group_name': 'hk', 'role_group_domain': 'hkunicom.com', 'role_group_privilege': 'none', 'role_group_withoem_privilege': 'none', 'role_group_kvm_privilege': 0, 'role_group_vmedia_privilege': 0}
+2026-03-24 10:33:16,401 [INFO] [FAILED] 172.19.41.50: ad_general=True, role_group=False
+2026-03-24 10:33:16,402 [INFO] 执行完成: success=0, failed=10, error=0, total=10
+2026-03-24 10:33:16,403 [INFO] 日志文件: logs\ad_run_20260324_103255.log

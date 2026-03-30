@@ -1,0 +1,25 @@
+2026-03-24 13:11:04,225 [INFO] 开始通过浪潮 AD 接口配置 11 台服务器...
+2026-03-24 13:11:04,484 [WARNING] 172.16.35.35 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,485 [WARNING] 172.16.35.29 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,485 [WARNING] 172.16.35.37 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,486 [WARNING] 172.16.35.28 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,486 [WARNING] 172.16.35.31 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,535 [WARNING] 172.16.35.36 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,535 [WARNING] 172.16.35.34 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,535 [WARNING] 172.16.35.33 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,536 [WARNING] 172.16.35.32 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:04,536 [WARNING] 172.16.35.30 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:19,638 [INFO] [FAILED] 172.16.35.33: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:19,679 [WARNING] 172.16.35.27 检测到 TLS 握手失败，切换到 legacy TLS 模式重试
+2026-03-24 13:11:19,706 [INFO] [FAILED] 172.16.35.36: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:19,706 [INFO] [FAILED] 172.16.35.31: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:19,848 [INFO] [FAILED] 172.16.35.32: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:19,906 [INFO] [FAILED] 172.16.35.30: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:20,004 [INFO] [FAILED] 172.16.35.35: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:20,331 [INFO] [FAILED] 172.16.35.34: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:20,362 [INFO] [FAILED] 172.16.35.37: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:20,368 [INFO] [FAILED] 172.16.35.28: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:20,574 [INFO] [FAILED] 172.16.35.29: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:35,137 [INFO] [FAILED] 172.16.35.27: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-24 13:11:35,139 [INFO] 执行完成: success=0, failed=11, error=0, total=11
+2026-03-24 13:11:35,139 [INFO] 日志文件: logs\ad_run_20260324_131104.log

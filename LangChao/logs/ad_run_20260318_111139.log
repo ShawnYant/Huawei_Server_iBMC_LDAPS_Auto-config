@@ -1,0 +1,57 @@
+2026-03-18 11:11:39,814 [INFO] 开始通过浪潮 AD 接口配置 54 台服务器...
+2026-03-18 11:11:41,872 [INFO] [ERROR] 172.19.40.108: HTTPSConnectionPool(host='172.19.40.108', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.108', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:41,875 [INFO] [ERROR] 172.19.40.106: HTTPSConnectionPool(host='172.19.40.106', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.106', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:41,876 [INFO] [ERROR] 172.19.40.104: HTTPSConnectionPool(host='172.19.40.104', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.104', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:41,877 [INFO] [ERROR] 172.19.40.102: HTTPSConnectionPool(host='172.19.40.102', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.102', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:41,877 [INFO] [ERROR] 172.19.40.105: HTTPSConnectionPool(host='172.19.40.105', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.105', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:41,974 [INFO] [ERROR] 172.19.40.103: HTTPSConnectionPool(host='172.19.40.103', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.103', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:42,047 [INFO] [ERROR] 172.19.40.110: HTTPSConnectionPool(host='172.19.40.110', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.110', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:42,049 [INFO] [ERROR] 172.19.40.111: HTTPSConnectionPool(host='172.19.40.111', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.111', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:42,050 [INFO] [ERROR] 172.19.40.109: HTTPSConnectionPool(host='172.19.40.109', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.109', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:42,050 [INFO] [ERROR] 172.19.40.107: HTTPSConnectionPool(host='172.19.40.107', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.107', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:43,956 [INFO] [ERROR] 172.19.40.112: HTTPSConnectionPool(host='172.19.40.112', port=443): Max retries exceeded with url: /api/session (Caused by NewConnectionError("HTTPSConnection(host='172.19.40.112', port=443): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。"))
+2026-03-18 11:11:57,671 [INFO] [FAILED] 172.19.40.55: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:11:58,555 [INFO] [FAILED] 172.19.40.63: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:11:58,725 [INFO] [FAILED] 172.19.40.58: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:11:59,064 [INFO] [FAILED] 172.19.40.59: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:11:59,591 [INFO] [FAILED] 172.19.40.56: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:00,161 [INFO] [FAILED] 172.19.40.61: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:00,297 [INFO] [FAILED] 172.19.40.62: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:01,139 [INFO] [FAILED] 172.19.40.57: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:01,511 [INFO] [FAILED] 172.19.40.60: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:07,684 [INFO] [FAILED] 172.19.40.64: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:15,859 [INFO] [FAILED] 172.19.40.66: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:16,656 [INFO] [FAILED] 172.19.40.67: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:16,994 [INFO] [FAILED] 172.19.40.72: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:17,033 [INFO] [FAILED] 172.19.40.65: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:18,502 [INFO] [FAILED] 172.19.40.69: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:18,507 [INFO] [FAILED] 172.19.40.68: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:18,643 [INFO] [FAILED] 172.19.40.74: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:19,319 [INFO] [FAILED] 172.19.40.73: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:20,533 [INFO] [FAILED] 172.19.40.75: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:24,129 [INFO] [FAILED] 172.19.40.76: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:32,932 [INFO] [FAILED] 172.19.40.77: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:33,654 [INFO] [FAILED] 172.19.40.78: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:34,766 [INFO] [FAILED] 172.19.40.83: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:34,877 [INFO] [FAILED] 172.19.40.81: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:35,481 [INFO] [FAILED] 172.19.40.80: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:36,274 [INFO] [FAILED] 172.19.40.79: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:36,870 [INFO] [FAILED] 172.19.40.82: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:37,110 [INFO] [FAILED] 172.19.40.84: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:40,951 [INFO] [FAILED] 172.19.40.86: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:41,135 [INFO] [FAILED] 172.19.40.85: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:48,559 [INFO] [FAILED] 172.19.40.87: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:53,037 [INFO] [FAILED] 172.19.40.91: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:53,536 [INFO] [FAILED] 172.19.40.90: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:53,674 [INFO] [FAILED] 172.19.40.92: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:54,560 [INFO] [FAILED] 172.19.40.94: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:54,994 [INFO] [FAILED] 172.19.40.89: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:56,015 [INFO] [FAILED] 172.19.40.88: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:56,490 [INFO] [FAILED] 172.19.40.93: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:58,790 [INFO] [FAILED] 172.19.40.95: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:12:58,921 [INFO] [FAILED] 172.19.40.96: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:13:07,025 [INFO] [FAILED] 172.19.40.97: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:13:11,314 [INFO] [FAILED] 172.19.40.99: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:13:12,567 [INFO] [FAILED] 172.19.40.98: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:13:12,569 [INFO] 执行完成: success=0, failed=43, error=11, total=54
+2026-03-18 11:13:12,569 [INFO] 日志文件: logs\ad_run_20260318_111139.log

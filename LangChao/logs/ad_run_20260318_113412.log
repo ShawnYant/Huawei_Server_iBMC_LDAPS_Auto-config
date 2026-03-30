@@ -1,0 +1,9 @@
+2026-03-18 11:34:12,972 [INFO] 开始通过浪潮 AD 接口配置 45 台服务器...
+2026-03-18 11:34:30,614 [INFO] [FAILED] 172.19.41.16: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:30,732 [INFO] [FAILED] 172.19.41.17: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:30,797 [INFO] [FAILED] 172.19.41.18: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:30,884 [INFO] [FAILED] 172.19.41.14: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:30,916 [INFO] [FAILED] 172.19.41.11: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:33,259 [INFO] [FAILED] 172.19.41.15: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:33,344 [INFO] [FAILED] 172.19.41.12: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
+2026-03-18 11:34:33,554 [INFO] [FAILED] 172.19.41.20: AD 已配置，但验证账号单次登录失败（status=401 body={ "error": "Could not login", "code": 1009 }）
